@@ -1,0 +1,532 @@
+@use "reset" as r;
+@use "mixin" as m;
+@use "common" as c;
+@use "font" as f;
+
+.weatherForecast {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include m.mq(sp) {
+    height: 100%;
+  }
+
+  @at-root {
+    .default#{&} {
+      background-image: url(../images/weather-forecast/blackBoard/base_blackBoard.jpg);
+    }
+    .flatPanel#{&} {
+      background-image: url(../images/weather-forecast/flatPanel/base.jpg);
+    }
+    .paper#{&} {
+      background-image: url(../images/weather-forecast/paper/base_paper.jpg);
+    }
+    .eva#{&} {
+      background-color: c.$eva-black;
+      font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+        "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN",
+        "Hiragino Mincho ProN", sans-serif;
+      color: #fff;
+    }
+  }
+  .header {
+    max-height: 90px;
+    padding: 24px;
+    margin-bottom: 80px;
+
+    @include m.mq(pc) {
+      margin-bottom: 16px;
+    }
+
+    @include m.mq(tab) {
+      margin-bottom: 16px;
+    }
+
+    @include m.mq(sp) {
+      padding: 8px;
+      margin-bottom: 8px;
+    }
+    &__title {
+      width: fit-content;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 64px;
+      color: c.$misao-blue;
+
+      @include m.mq(pc) {
+        font-size: 56px;
+      }
+
+      @include m.mq(tab) {
+        font-size: 56px;
+      }
+
+      @include m.mq(sp) {
+        font-size: 32px;
+      }
+
+      img {
+        @include m.mq(pc) {
+          max-width: 300px;
+          margin: 0 auto;
+          display: block;
+        }
+
+        @include m.mq(tab) {
+          max-width: 300px;
+          margin: 0 auto;
+          display: block;
+        }
+
+        @include m.mq(sp) {
+          max-width: 135px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      &--eva {
+        color: #fff;
+      }
+    }
+  }
+  &__illust {
+    position: absolute;
+    &--top {
+      top: 0;
+      left: 0;
+
+      @include m.mq(pc) {
+        width: 25%;
+      }
+
+      @include m.mq(tab) {
+        width: 25%;
+      }
+
+      @include m.mq(sp) {
+        width: 20%;
+      }
+    }
+    &--town {
+      left: 0;
+      bottom: 7%;
+    }
+    &--bottom {
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__content {
+    width: calc(100% - 64px);
+    padding: 32px 24px;
+    margin: 0 auto;
+    font-weight: bold;
+
+    @include m.mq(pc) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include m.mq(tab) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include m.mq(sp) {
+      padding: 8px 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--default {
+      background-color: #fefefe;
+    }
+  }
+}
+.weatherList {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  &__item {
+    width: calc(100% / 7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    @include m.mq(pc) {
+      gap: 8px;
+    }
+
+    @include m.mq(tab) {
+      gap: 8px;
+    }
+
+    @include m.mq(sp) {
+      gap: 4px;
+    }
+  }
+  &__day {
+    font-size: 40px;
+
+    @include m.mq(pc) {
+      font-size: 32px;
+    }
+
+    @include m.mq(tab) {
+      font-size: 32px;
+    }
+
+    @include m.mq(sp) {
+      font-size: 18px;
+    }
+
+    @at-root {
+      /*土曜*/
+      &--sat#{&} {
+        color: c.$misao-blue;
+      }
+      /*日曜*/
+      &--sun#{&} {
+        color: c.$red;
+      }
+      /*祝日*/
+      &--holiday#{&} {
+        color: c.$red;
+      }
+    }
+  }
+  &__dayOfWeek {
+    font-size: 32px;
+
+    @include m.mq(pc) {
+      font-size: 24px;
+    }
+
+    @include m.mq(tab) {
+      font-size: 24px;
+    }
+
+    @include m.mq(sp) {
+      font-size: 18px;
+    }
+    @at-root {
+      /*土曜*/
+      &--sat#{&} {
+        color: c.$misao-blue;
+      }
+      /*日曜*/
+      &--sun#{&} {
+        color: c.$red;
+      }
+      /*祝日*/
+      &--holiday#{&} {
+        color: c.$red;
+      }
+    }
+  }
+  &__dayOfWeather {
+    @include m.mq(pc) {
+      width: 84px;
+    }
+
+    @include m.mq(tab) {
+      width: 84px;
+    }
+
+    @include m.mq(sp) {
+      width: 42px;
+    }
+  }
+  &__temperature {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: 32px;
+
+    @include m.mq(sp) {
+      gap: 4px;
+      font-size: 18px;
+    }
+
+    &--max {
+      color: c.$red;
+    }
+    &--min {
+      color: c.$misao-blue;
+    }
+
+    span {
+      font-size: 20px;
+
+      @include m.mq(pc) {
+        font-size: 16px;
+      }
+
+      @include m.mq(tab) {
+        font-size: 16px;
+      }
+
+      @include m.mq(sp) {
+        font-size: 13px;
+      }
+    }
+  }
+  &__rainyPercent {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: 32px;
+
+    @include m.mq(sp) {
+      gap: 4px;
+      font-size: 20px;
+    }
+
+    &--icon {
+      @include m.mq(sp) {
+        width: 20px;
+      }
+    }
+
+    &--value {
+      span {
+        display: inline-block;
+        font-size: 18px;
+
+        @include m.mq(pc) {
+          font-size: 16px;
+        }
+
+        @include m.mq(tab) {
+          font-size: 16px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__wbgt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    @include m.mq(sp) {
+      gap: 4px;
+    }
+
+    &--icon {
+      width: 103px;
+
+      @include m.mq(pc) {
+        width: 52px;
+      }
+
+      @include m.mq(tab) {
+        width: 52px;
+      }
+
+      @include m.mq(sp) {
+        width: 24px;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &--value {
+      width: 200px;
+      height: 64px;
+      border-radius: 12px;
+      margin: 0 auto;
+      line-height: 64px;
+      background-color: orange;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #fff;
+
+      @include m.mq(pc) {
+        width: 100px;
+        height: 48px;
+        border-radius: 9px;
+        line-height: 48px;
+        font-size: 20px;
+      }
+
+      @include m.mq(tab) {
+        width: 100px;
+        height: 48px;
+        border-radius: 9px;
+        line-height: 48px;
+        font-size: 20px;
+      }
+
+      @include m.mq(sp) {
+        width: 63px;
+        height: 31px;
+        border-radius: 4px;
+        line-height: 31px;
+        font-size: 13px;
+      }
+      @at-root {
+        .safety#{&} {
+          background-color: c.$safety;
+        }
+        .attention#{&} {
+          background-color: c.$attention;
+        }
+        .vigilance#{&} {
+          background-color: c.$vigilance;
+        }
+        .s-vigilance#{&} {
+          background-color: c.$s-vigilance;
+        }
+        .danger#{&} {
+          background-color: c.$danger;
+        }
+      }
+    }
+  }
+  @at-root {
+    &--eva#{&} {
+      .weatherList__item {
+        gap: 32px;
+
+        @include m.mq(sp) {
+          gap: 8px;
+        }
+      }
+      .weatherList__day {
+        font-family: "Noto Sans JP", sans-serif;
+        font-family: "Roboto", sans-serif;
+        &--sat {
+          color: c.$eva-blue;
+        }
+        &--sun {
+          color: c.$eva-red;
+        }
+        &--holiday {
+          color: c.$eva-red;
+        }
+      }
+      .weatherList__dayOfWeek {
+        font-family: "Noto Sans JP", sans-serif;
+        font-family: "Roboto", sans-serif;
+        &--sat {
+          color: c.$eva-blue;
+        }
+        &--sun {
+          color: c.$eva-red;
+        }
+        &--holiday {
+          color: c.$eva-red;
+        }
+      }
+      .weatherList__dayOfWeather {
+        height: 132px;
+
+        @include m.mq(pc) {
+          height: 84px;
+        }
+
+        @include m.mq(tab) {
+          height: 84px;
+        }
+
+        @include m.mq(sp) {
+          height: 42px;
+        }
+
+        img {
+          width: auto;
+          max-width: fit-content;
+          height: 100%;
+        }
+      }
+      .weatherList__temperature {
+        font-family: "dseg";
+
+        @include m.mq(tab) {
+          font-size: 28px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 13px;
+        }
+        &--max {
+          color: c.$eva-red;
+        }
+        &--min {
+          color: c.$eva-blue;
+        }
+
+        span {
+
+          @include m.mq(sp) {
+            font-size: 11px;
+          }
+        }
+      }
+      .weatherList__rainyPercent {
+        gap: 24px;
+
+        @include m.mq(tab) {
+          gap: 16px;
+          font-size: 24px;
+        }
+
+        @include m.mq(sp) {
+          gap: 4px;
+          font-size: 13px;
+        }
+
+        &--title {
+          line-height: 1.3;
+        }
+        &--value {
+          font-size: 48px;
+
+          @include m.mq(tab) {
+            font-size: 32px;
+          }
+
+          @include m.mq(sp) {
+            font-size: 18px;
+          }
+        }
+      }
+      .weatherList__wbgt {
+        &--icon {
+          width: 177px;
+
+          @include m.mq(tab) {
+            width: 123px;
+          }
+
+          @include m.mq(sp) {
+            width: 66px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>騒音振動計フロント|default</title>
+    <link rel="stylesheet" href="../assets/css/noise-meter.css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="noiseMeter noiseMeter--eva">
+    <header class="header">
+        <h1 class="header__title">現在の騒音・振動</h1>
+        <p class="header__date">10<span>月</span>23<span>日</span>13:19<span>時点</span></p>
+    </header>
+    <div class="dataWrapper">
+        <!--騒音-->
+        <div class="noiseWrapper">
+            <h2 class="noiseWrapper__title">
+                <img src="../assets/images/noise-meter/eva/icon_noise.png" alt="騒音">
+            </h2>
+            <div class="valueWrapper">
+                <p class="valueWrapper__strings">
+                    65
+                </p>
+                <p class="valueWrapper__db">
+                    dB
+                </p>
+            </div>
+        </div>
+        <!--振動-->
+        <div class="vibrationWrapper">
+            <h2 class="vibrationWrapper__title">
+                <img src="../assets/images/noise-meter/eva/icon_vibration.png" alt="振動">
+            </h2>
+            <div class="valueWrapper">
+                <p class="valueWrapper__strings">
+                    59
+                </p>
+                <p class="valueWrapper__db">
+                    db
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="noiseMeter--eva--bottom">
+        <img src="../assets/images/noise-meter/eva/base_bottom.png" alt="">
+    </div>
+</body>
+
+</html>

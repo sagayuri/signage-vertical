@@ -1,0 +1,559 @@
+@charset "UTF-8";
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+@font-face {
+  font-family: "dseg";
+  src: url("../font/DSEG7Modern-Bold.ttf") format("ttf");
+  src: url("../font/DSEG7Modern-Bold.woff") format("woff");
+  src: url("../font/DSEG7Modern-Bold.woff2") format("woff2");
+}
+.noiseMeter {
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.noiseMeter__illust--top {
+  width: 20%;
+  min-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.noiseMeter__illust--couple {
+  width: 10%;
+  min-width: 200px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter__illust--couple {
+    min-width: 136px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter__illust--couple {
+    min-width: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter__illust--couple {
+    min-width: 78px;
+  }
+}
+.noiseMeter__illust--couple img {
+  width: 100%;
+  height: auto;
+}
+.noiseMeter__illust--family {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter__illust--family {
+    max-width: 180px;
+    top: 65%;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter__illust--family {
+    max-width: 151px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter__illust--family {
+    max-width: 114px;
+    left: 37%;
+    top: 55%;
+  }
+}
+.noiseMeter__illust--town {
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter__illust--town {
+    width: 100%;
+    height: 80px;
+    bottom: 4%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter__illust--town {
+    height: 48px;
+  }
+}
+.noiseMeter__illust--town img {
+  width: 100%;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter__illust--town img {
+    height: 100%;
+  }
+}
+.noiseMeter__illust--bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.noiseMeter__illust--bottom img {
+  width: 100%;
+}
+.noiseMeter .header {
+  width: 100%;
+  padding: 12px 32px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  z-index: 100;
+  justify-content: space-between;
+  background: rgba(0, 26, 0, 0.5);
+  color: #fff;
+}
+.noiseMeter .header__title {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 56px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .header__title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .header__title {
+    font-size: 32px;
+  }
+}
+.noiseMeter .header__date {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 56px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .header__date {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .header__date {
+    font-size: 32px;
+  }
+}
+.noiseMeter .header__date span {
+  font-size: 24px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .header__date span {
+    font-size: 16px;
+  }
+}
+.noiseMeter .dataWrapper {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.noiseMeter .noiseWrapper__title {
+  width: 50%;
+  min-width: 150px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .noiseWrapper__title {
+    width: 40%;
+    margin-left: 12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .noiseWrapper__title {
+    min-width: 114px;
+    margin-bottom: 0;
+  }
+}
+.noiseMeter .vibrationWrapper__title {
+  width: 50%;
+  min-width: 150px;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .vibrationWrapper__title {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .vibrationWrapper__title {
+    min-width: 114px;
+    margin-bottom: 0;
+  }
+}
+.noiseMeter .valueWrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 32px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .valueWrapper {
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter .valueWrapper {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .valueWrapper {
+    gap: 4px;
+  }
+}
+.noiseMeter .valueWrapper__strings {
+  font-size: 298px;
+  font-weight: bold;
+  color: #f4c403;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .valueWrapper__strings {
+    line-height: 1;
+    font-size: 250px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter .valueWrapper__strings {
+    font-size: 220px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .valueWrapper__strings {
+    font-size: 120px;
+  }
+}
+.noiseMeter .valueWrapper__db {
+  min-width: 80px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter .valueWrapper__db {
+    max-width: 120px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter .valueWrapper__db {
+    max-width: 87px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter .valueWrapper__db {
+    min-width: auto;
+    max-width: 60px;
+  }
+}
+.noiseMeter--default {
+  background-image: url(../images/noise-meter/blackBoard/base_blackBoard.jpg);
+}
+
+.noiseMeter--flatPanel {
+  background-image: url(../images/noise-meter/flatPanel/base.jpg);
+}
+.noiseMeter--flatPanel .header {
+  background: rgba(8, 45, 133, 0.8);
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--flatPanel .noiseWrapper__title {
+    max-width: 220px;
+  }
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--flatPanel .vibrationWrapper__title {
+    max-width: 220px;
+  }
+}
+.noiseMeter--flatPanel .valueWrapper__strings {
+  width: 100%;
+  padding-left: 80px;
+  margin-top: 32px;
+  background-image: url(../images/noise-meter/flatPanel/display.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--flatPanel .valueWrapper__strings {
+    padding: 20px;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--flatPanel .valueWrapper__strings {
+    padding: 20px;
+    line-height: 1;
+    font-size: 180px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--flatPanel .valueWrapper__strings {
+    width: auto;
+    padding: 20px;
+    margin-top: 16px;
+    line-height: 1;
+    font-size: 100px;
+  }
+}
+.noiseMeter--flatPanel .valueWrapper__db {
+  width: 25%;
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--flatPanel .valueWrapper__db {
+    max-width: 41px;
+  }
+}
+
+.noiseMeter--paper {
+  background-image: url(../images/noise-meter/paper/base_paper.jpg);
+}
+.noiseMeter--paper .header {
+  background: rgba(8, 45, 133, 0.8);
+}
+.noiseMeter--paper .noiseWrapper__title {
+  margin-bottom: 0;
+}
+.noiseMeter--paper .vibrationWrapper__title {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--paper .valueWrapper {
+    gap: 16px;
+  }
+}
+.noiseMeter--paper .valueWrapper__strings {
+  width: 100%;
+  padding-left: 80px;
+  margin-top: 32px;
+  background-image: url(../images/noise-meter/paper/blackBoard_small.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--paper .valueWrapper__strings {
+    padding: 32px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--paper .valueWrapper__strings {
+    padding: 20px;
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--paper .valueWrapper__strings {
+    width: auto;
+    padding: 20px;
+    margin-top: 16px;
+    line-height: 1;
+  }
+}
+.noiseMeter--paper .valueWrapper__db {
+  width: 25%;
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--paper .valueWrapper__db {
+    max-width: 41px;
+  }
+}
+
+.noiseMeter--eva {
+  background-image: url(../images/noise-meter/eva/bg_noise-meter.png);
+}
+.noiseMeter--eva .header {
+  width: 100%;
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--eva .header__title {
+    font-size: 40px;
+  }
+}
+.noiseMeter--eva .dataWrapper {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--eva .dataWrapper {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--eva .dataWrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--eva .dataWrapper {
+    width: 90%;
+  }
+}
+.noiseMeter--eva .dataWrapper .noiseWrapper__title {
+  width: 30%;
+  margin-left: 16px;
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--eva .dataWrapper .noiseWrapper__title {
+    margin-bottom: 24px;
+  }
+}
+.noiseMeter--eva .dataWrapper .vibrationWrapper__title {
+  width: 30%;
+  margin-left: 16px;
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--eva .dataWrapper .vibrationWrapper__title {
+    margin-bottom: 24px;
+  }
+}
+.noiseMeter--eva .valueWrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+.noiseMeter--eva .valueWrapper__strings {
+  font-family: "dseg";
+  font-size: 240px;
+  font-weight: bold;
+  color: #ffab00;
+  text-shadow: 0 0 10px #b90008, 0 0 30px #b90008;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--eva .valueWrapper__strings {
+    font-size: 180px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--eva .valueWrapper__strings {
+    font-size: 150px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--eva .valueWrapper__strings {
+    font-size: 90px;
+  }
+}
+.noiseMeter--eva .valueWrapper__db {
+  font-size: 124px;
+  font-weight: bold;
+  color: #ffab00;
+  text-shadow: 0 0 10px #b90008, 0 0 30px #b90008;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .noiseMeter--eva .valueWrapper__db {
+    font-size: 70px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .noiseMeter--eva .valueWrapper__db {
+    max-width: none;
+    font-size: 67px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .noiseMeter--eva .valueWrapper__db {
+    white-space: nowrap;
+    font-size: 50px;
+  }
+}
+.noiseMeter--eva--bottom {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}

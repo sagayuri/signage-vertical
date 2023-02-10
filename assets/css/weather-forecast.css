@@ -1,0 +1,653 @@
+@charset "UTF-8";
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+@font-face {
+  font-family: "dseg";
+  src: url("../font/DSEG7Modern-Bold.ttf") format("ttf");
+  src: url("../font/DSEG7Modern-Bold.woff") format("woff");
+  src: url("../font/DSEG7Modern-Bold.woff2") format("woff2");
+}
+.weatherForecast {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast {
+    height: 100%;
+  }
+}
+.default.weatherForecast {
+  background-image: url(../images/weather-forecast/blackBoard/base_blackBoard.jpg);
+}
+
+.flatPanel.weatherForecast {
+  background-image: url(../images/weather-forecast/flatPanel/base.jpg);
+}
+
+.paper.weatherForecast {
+  background-image: url(../images/weather-forecast/paper/base_paper.jpg);
+}
+
+.eva.weatherForecast {
+  background-color: #1d1412;
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+  color: #fff;
+}
+
+.weatherForecast .header {
+  max-height: 90px;
+  padding: 24px;
+  margin-bottom: 80px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherForecast .header {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherForecast .header {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast .header {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+}
+.weatherForecast .header__title {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 64px;
+  color: #082d85;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherForecast .header__title {
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherForecast .header__title {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast .header__title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherForecast .header__title img {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherForecast .header__title img {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast .header__title img {
+    max-width: 135px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+.weatherForecast .header__title--eva {
+  color: #fff;
+}
+.weatherForecast__illust {
+  position: absolute;
+}
+.weatherForecast__illust--top {
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherForecast__illust--top {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherForecast__illust--top {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast__illust--top {
+    width: 20%;
+  }
+}
+.weatherForecast__illust--town {
+  left: 0;
+  bottom: 7%;
+}
+.weatherForecast__illust--bottom {
+  left: 0;
+  bottom: 0;
+}
+.weatherForecast__content {
+  width: calc(100% - 64px);
+  padding: 32px 24px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherForecast__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherForecast__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast__content {
+    padding: 8px 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.weatherForecast__content--default {
+  background-color: #fefefe;
+}
+
+.weatherList {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.weatherList__item {
+  width: 14.2857142857%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__item {
+    gap: 8px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__item {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__item {
+    gap: 4px;
+  }
+}
+.weatherList__day {
+  font-size: 40px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__day {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__day {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__day {
+    font-size: 18px;
+  }
+}
+/*土曜*/
+.weatherList__day--sat.weatherList__day {
+  color: #082d85;
+}
+
+/*日曜*/
+.weatherList__day--sun.weatherList__day {
+  color: #aa0d0d;
+}
+
+/*祝日*/
+.weatherList__day--holiday.weatherList__day {
+  color: #aa0d0d;
+}
+
+.weatherList__dayOfWeek {
+  font-size: 32px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__dayOfWeek {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__dayOfWeek {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__dayOfWeek {
+    font-size: 18px;
+  }
+}
+/*土曜*/
+.weatherList__dayOfWeek--sat.weatherList__dayOfWeek {
+  color: #082d85;
+}
+
+/*日曜*/
+.weatherList__dayOfWeek--sun.weatherList__dayOfWeek {
+  color: #aa0d0d;
+}
+
+/*祝日*/
+.weatherList__dayOfWeek--holiday.weatherList__dayOfWeek {
+  color: #aa0d0d;
+}
+
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__dayOfWeather {
+    width: 84px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__dayOfWeather {
+    width: 84px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__dayOfWeather {
+    width: 42px;
+  }
+}
+.weatherList__temperature {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 32px;
+}
+@media screen and (max-width: 767px) {
+  .weatherList__temperature {
+    gap: 4px;
+    font-size: 18px;
+  }
+}
+.weatherList__temperature--max {
+  color: #aa0d0d;
+}
+.weatherList__temperature--min {
+  color: #082d85;
+}
+.weatherList__temperature span {
+  font-size: 20px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__temperature span {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__temperature span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__temperature span {
+    font-size: 13px;
+  }
+}
+.weatherList__rainyPercent {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 32px;
+}
+@media screen and (max-width: 767px) {
+  .weatherList__rainyPercent {
+    gap: 4px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__rainyPercent--icon {
+    width: 20px;
+  }
+}
+.weatherList__rainyPercent--value span {
+  display: inline-block;
+  font-size: 18px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__rainyPercent--value span {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__rainyPercent--value span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__rainyPercent--value span {
+    font-size: 16px;
+  }
+}
+.weatherList__wbgt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (max-width: 767px) {
+  .weatherList__wbgt {
+    gap: 4px;
+  }
+}
+.weatherList__wbgt--icon {
+  width: 103px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__wbgt--icon {
+    width: 52px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__wbgt--icon {
+    width: 52px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__wbgt--icon {
+    width: 24px;
+  }
+}
+.weatherList__wbgt--icon img {
+  width: 100%;
+  height: auto;
+}
+.weatherList__wbgt--value {
+  width: 200px;
+  height: 64px;
+  border-radius: 12px;
+  margin: 0 auto;
+  line-height: 64px;
+  background-color: orange;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList__wbgt--value {
+    width: 100px;
+    height: 48px;
+    border-radius: 9px;
+    line-height: 48px;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList__wbgt--value {
+    width: 100px;
+    height: 48px;
+    border-radius: 9px;
+    line-height: 48px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList__wbgt--value {
+    width: 63px;
+    height: 31px;
+    border-radius: 4px;
+    line-height: 31px;
+    font-size: 13px;
+  }
+}
+.safety.weatherList__wbgt--value {
+  background-color: #58779a;
+}
+
+.attention.weatherList__wbgt--value {
+  background-color: #81ac62;
+}
+
+.vigilance.weatherList__wbgt--value {
+  background-color: #c6b563;
+}
+
+.s-vigilance.weatherList__wbgt--value {
+  background-color: #d59369;
+}
+
+.danger.weatherList__wbgt--value {
+  background-color: #c8787a;
+}
+
+.weatherList--eva.weatherList .weatherList__item {
+  gap: 32px;
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__item {
+    gap: 8px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__day {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.weatherList--eva.weatherList .weatherList__day--sat {
+  color: #6eadd8;
+}
+.weatherList--eva.weatherList .weatherList__day--sun {
+  color: #cd0011;
+}
+.weatherList--eva.weatherList .weatherList__day--holiday {
+  color: #cd0011;
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeek {
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeek--sat {
+  color: #6eadd8;
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeek--sun {
+  color: #cd0011;
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeek--holiday {
+  color: #cd0011;
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeather {
+  height: 132px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .weatherList--eva.weatherList .weatherList__dayOfWeather {
+    height: 84px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherList__dayOfWeather {
+    height: 84px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__dayOfWeather {
+    height: 42px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__dayOfWeather img {
+  width: auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  height: 100%;
+}
+.weatherList--eva.weatherList .weatherList__temperature {
+  font-family: "dseg";
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherList__temperature {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__temperature {
+    font-size: 13px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__temperature--max {
+  color: #cd0011;
+}
+.weatherList--eva.weatherList .weatherList__temperature--min {
+  color: #6eadd8;
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__temperature span {
+    font-size: 11px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__rainyPercent {
+  gap: 24px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherList__rainyPercent {
+    gap: 16px;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__rainyPercent {
+    gap: 4px;
+    font-size: 13px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__rainyPercent--title {
+  line-height: 1.3;
+}
+.weatherList--eva.weatherList .weatherList__rainyPercent--value {
+  font-size: 48px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherList__rainyPercent--value {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__rainyPercent--value {
+    font-size: 18px;
+  }
+}
+.weatherList--eva.weatherList .weatherList__wbgt--icon {
+  width: 177px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherList__wbgt--icon {
+    width: 123px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList--eva.weatherList .weatherList__wbgt--icon {
+    width: 66px;
+  }
+}

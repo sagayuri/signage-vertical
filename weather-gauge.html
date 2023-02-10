@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>気象計</title>
+    <link rel="stylesheet" href="./assets/css/weather-gauge.css" type="text/css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="Weather_gauge">
+    <ul class="Weather_gauge__List">
+        <!--気温-->
+        <li class="Weather_gauge__Item">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Temp">気温</h2>
+            <p class="Weather_gauge__Value">32.05<span class="Weather_gauge__Value--Unit">℃</span></p>
+            <div class="Weather_gauge__Other">
+                <p class="Weather_gauge__Other--Min">本日の最低気温<span class="Weather_gauge__Other--Numbers">28.0</span>℃</p>
+                <p class="Weather_gauge__Other--Max">本日の最高気温<span class="Weather_gauge__Other--Numbers">37.28</span>℃
+                </p>
+            </div>
+        </li>
+        <!--湿度-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Humidity">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Humidity">湿度</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Humidity">68<span
+                    class="Weather_gauge__Value--Unit">%</span>
+            </p>
+        </li>
+        <!--気圧-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Pressure">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Pressure">気温</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Pressure">1008.6<span
+                    class="Weather_gauge__Value--Unit">hPa</span></p>
+        </li>
+        <!--風向-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Direction">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Direction">風向き</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Direction">北北西</p>
+        </li>
+        <!--風速-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Speed">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Speed">風速</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Average">
+                平均風速<span class="Weather_gauge__Value--Numbers">12</span>m/s</p>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Maximum">
+                最大風速<span class="Weather_gauge__Value--Numbers">5</span>m/s</p>
+        </li>
+        <!--UVI-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Uvi">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--White Weather_gauge__Title--Uvi">UVI</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--White">10.2</p>
+            <p class="Weather_gauge__Value--Ja">非常に強い</p>
+        </li>
+        <!--日の出日の入-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Sunrise">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Sunrise">日の出・日の入</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の出<span
+                    class="Weather_gauge__Value--Numbers">5:08</span></p>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の入<span
+                    class="Weather_gauge__Value--Numbers">18:17</span></p>
+        </li>
+        <!--雨量-->
+        <li class="Weather_gauge__Item">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Rainfall">雨量</h2>
+            <p class="Weather_gauge__Value--Unit">1時間雨量<span class="Weather_gauge__Value--Numbers">32</span><span
+                    class="Weather_gauge__Value--Unit">mm</span></p>
+            <div class="Weather_gauge__Other">
+                <p class="Weather_gauge__Other--Day">24時間雨量<span class="Weather_gauge__Other--Numbers">100</span>mm
+                </p>
+                <p class="Weather_gauge__Other--Day">1日雨量<span class="Weather_gauge__Other--Numbers">112</span>mm
+                </p>
+            </div>
+        </li>
+        <!--換算WBGT-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Wbgt">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--White Weather_gauge__Title--Wbgt">換算WBGT</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--White">28<span
+                    class="Weather_gauge__Value--Unit">℃</span></p>
+            <p class="Weather_gauge__Value--Ja">厳重警戒</p>
+        </li>
+    </ul>
+
+</body>
+
+</html>

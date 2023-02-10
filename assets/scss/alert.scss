@@ -1,0 +1,123 @@
+@use "reset" as r;
+@use "mixin" as m;
+@use "common" as c;
+
+.alertContentOpening {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  @at-root {
+    &--blue#{&} {
+      background-image: url(../images/alert/blue/alert_base_opening.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &--red#{&} {
+      background-image: url(../images/alert/red/alert_base_opening.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &--yellow#{&} {
+      background-image: url(../images/alert/yellow/alert_base_opening.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  @at-root {
+    .fadeIn#{&} {
+      animation-name: fadeInAnime;
+      animation-fill-mode: forwards;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+      animation-delay: 0.5s;
+      animation-direction: normal;
+    }
+
+    @keyframes fadeInAnime {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+}
+.alertContent {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  @at-root {
+    &--blue#{&} {
+      background-image: url(../images/alert/blue/alert_main.jpg);
+    }
+    &--red#{&} {
+      background-image: url(../images/alert/red/alert_main.jpg);
+    }
+    &--yellow#{&} {
+      background-image: url(../images/alert/yellow/alert_main.jpg);
+    }
+  }
+  @at-root {
+    .slideIn#{&} {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      animation-name: slideIn;
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+      animation-fill-mode: forwards;
+      animation-duration: 0.5s;
+      animation-direction: normal;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateX(180px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__blink {
+    padding: 32px 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 80px;
+    font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+      "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+    text-align: center;
+    color: white;
+    animation-name: blinking;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    @at-root {
+      &--blue#{&} {
+        border: 5px solid #082d85;
+      }
+      &--red#{&} {
+        border: 5px solid #cd0011;
+      }
+      &--yellow#{&} {
+        border: 5px solid #ffd900;
+      }
+    }
+  }
+  @keyframes blinking {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

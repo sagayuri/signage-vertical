@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>騒音振動計フロント|default</title>
+    <link rel="stylesheet" href="./assets/css/noise-meter.css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="noiseMeter noiseMeter--default">
+    <header class="header">
+        <h1 class="header__title">現在の騒音・振動</h1>
+        <p class="header__date">10<span>月</span>23<span>日</span>13:19<span>時点</span></p>
+    </header>
+    <div class="noiseMeter__illust--top">
+        <img src="./assets/images/noise-meter/blackBoard/illust_top.png" alt="">
+    </div>
+    <div class="noiseMeter__illust--couple">
+        <img src="./assets/images/noise-meter/blackBoard/illust_couple.png" alt="">
+    </div>
+    <div class="noiseMeter__illust--family">
+        <img src="./assets/images/noise-meter/blackBoard/illust_family.png" alt="">
+    </div>
+    <div class="dataWrapper">
+        <!--騒音-->
+        <div class="noiseWrapper">
+            <h2 class="noiseWrapper__title">
+                <img src="./assets/images/noise-meter/blackBoard/icon_noise.png" alt="騒音">
+            </h2>
+            <div class="valueWrapper">
+                <p class="valueWrapper__strings">
+                    65
+                </p>
+                <span class="valueWrapper__db">
+                    <img src="./assets/images/noise-meter/blackBoard/dB.png" alt="デシベル">
+                </span>
+            </div>
+        </div>
+        <!--振動-->
+        <div class="vibrationWrapper">
+            <h2 class="vibrationWrapper__title">
+                <img src="./assets/images/noise-meter/blackBoard/icon_vibration.png" alt="振動">
+            </h2>
+            <div class="valueWrapper">
+                <p class="valueWrapper__strings">
+                    59
+                </p>
+                <span class="valueWrapper__db">
+                    <img src="./assets/images/noise-meter/blackBoard/dB.png" alt="デシベル">
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="noiseMeter__illust--town">
+        <img src="./assets/images/noise-meter/blackBoard/illust_town.png" alt="">
+    </div>
+    <div class="noiseMeter__illust--bottom">
+        <img src="./assets/images/noise-meter/blackBoard/blackBoard_bottom.jpg" alt="">
+    </div>
+</body>
+
+</html>

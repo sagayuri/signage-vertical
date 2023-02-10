@@ -1,0 +1,35 @@
+@use "mixin" as m;
+
+$misao-blue: #082d85;
+$black: #333333;
+$red: #aa0d0d;
+$eva-black: #1d1412;
+$eva-red: #cd0011;
+$eva-yellow: #ffd900;
+$eva-blue: #6eadd8;
+$safety: #58779a;
+$attention: #81ac62;
+$vigilance: #c6b563;
+$s-vigilance: #d59369;
+$danger: #c8787a;
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: $black;
+  overflow: hidden;
+
+  @include m.mq(pc) {
+    overflow: scroll;
+  }
+
+  @include m.mq(tab) {
+    overflow: scroll;
+  }
+
+  @include m.mq(sp) {
+    overflow: scroll;
+  }
+}

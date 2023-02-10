@@ -1,0 +1,636 @@
+@charset "UTF-8";
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  overflow: hidden;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  body {
+    overflow: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+.heatstroke.eva {
+  position: relative;
+  background-color: #1d1412;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
+  font-weight: bold;
+}
+.heatstroke.eva.safety {
+  background-image: url(../images/heatstroke/eva/bg_safety.png);
+}
+.heatstroke.eva.attention {
+  background-image: url(../images/heatstroke/eva/bg_attention.png);
+}
+.heatstroke.eva.vigilance {
+  background-image: url(../images/heatstroke/eva/bg_vigilance.png);
+}
+.heatstroke.eva.s-vigilance {
+  background-image: url(../images/heatstroke/eva/bg_s-vigilance.png);
+}
+.heatstroke.eva.danger {
+  background-image: url(../images/heatstroke/eva/bg_danger.png);
+}
+.heatstroke.eva .bar_top {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.heatstroke.eva .bar_bottom {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.heatstroke.eva header {
+  height: 10.2%;
+  max-height: 111px;
+  padding: 64px 32px 24px 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva header {
+    padding: 53px 32px 24px 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva header {
+    padding: 26px 32px 24px 32px;
+  }
+}
+.heatstroke.eva header .content_title {
+  font-size: 48px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva header .content_title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva header .content_title {
+    font-size: 24px;
+  }
+}
+.heatstroke.eva header .update_time {
+  font-size: 48px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva header .update_time {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva header .update_time {
+    font-size: 24px;
+  }
+}
+.heatstroke.eva header .update_time span {
+  margin-left: 4px;
+  margin-right: 8px;
+  display: inline-block;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva header .update_time span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva header .update_time span {
+    font-size: 16px;
+  }
+}
+.heatstroke.eva main {
+  width: 62%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main {
+    width: 82%;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main {
+    width: 87%;
+  }
+}
+.heatstroke.eva main .numerical_value {
+  text-align: center;
+  font-size: 68px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .numerical_value {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .numerical_value {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .numerical_value {
+    font-size: 24px;
+  }
+}
+.heatstroke.eva main .numerical_value span {
+  margin-left: 16px;
+  display: inline-block;
+  font-size: 70px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .numerical_value span {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .numerical_value span {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .numerical_value span {
+    font-size: 26px;
+  }
+}
+.heatstroke.eva main .content_body {
+  margin-top: 24px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .content_body {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .content_body {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body {
+    margin-top: 0;
+  }
+}
+.heatstroke.eva main .content_body .value_content {
+  text-align: center;
+  font-size: 233px;
+  white-space: nowrap;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .content_body .value_content {
+    font-size: 190px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .content_body .value_content {
+    margin: 24px 0;
+    line-height: 1;
+    font-size: 170px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body .value_content {
+    margin: 8px 0;
+    line-height: 1;
+    font-size: 64px;
+  }
+}
+.heatstroke.eva main .content_body .vigilance_level {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 24px;
+  border: 4px solid white;
+  margin: 0 auto 32px;
+  font-size: 68px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #1d1412;
+  /*値によって色が変わる*/
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .content_body .vigilance_level {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .content_body .vigilance_level {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body .vigilance_level {
+    padding: 0 24px;
+    margin: 0 auto;
+    font-size: 24px;
+  }
+}
+.heatstroke.eva main .content_body .vigilance_level span {
+  margin-left: 16px;
+  display: inline-block;
+  font-size: 70px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .content_body .vigilance_level span {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .content_body .vigilance_level span {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_body .vigilance_level span {
+    font-size: 24px;
+  }
+}
+.heatstroke.eva main .content_body .vigilance_level.safety {
+  border: 4px solid #6eadd8;
+  background-color: rgba(110, 173, 216, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.attention {
+  border: 4px solid #6dad19;
+  background-color: rgba(109, 173, 25, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.vigilance {
+  border: 4px solid #ffd800;
+  background-color: rgba(255, 216, 0, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.s-vigilance {
+  border: 4px solid #f89901;
+  background-color: rgba(248, 153, 1, 0.6);
+}
+.heatstroke.eva main .content_body .vigilance_level.danger {
+  border: 4px solid #cd0001;
+  background-color: rgba(205, 0, 1, 0.6);
+  color: white;
+}
+.heatstroke.eva main .content_footer {
+  margin-top: 48px;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_footer {
+    margin-top: 16px;
+  }
+}
+.heatstroke.eva main .content_footer .content_text {
+  font-size: 32px;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.eva main .content_footer .content_text {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.eva main .content_footer .content_text {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.eva main .content_footer .content_text {
+    font-size: 16px;
+  }
+}
+.heatstroke.default {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/heatstroke/bg_heatstroke.jpg);
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  color: white;
+  overflow: scroll;
+}
+.heatstroke.default header {
+  width: 100%;
+  height: 10.2%;
+  max-height: 111px;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 10%;
+  background-image: url(../images/heatstroke/bg_header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heatstroke.default header .content_title {
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default header .content_title {
+    font-size: 24px;
+  }
+}
+.heatstroke.default header .update_time {
+  font-size: 48px;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default header .update_time {
+    font-size: 32px;
+  }
+}
+.heatstroke.default header .update_time span {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 8px;
+  font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default header .update_time span {
+    font-size: 16px;
+  }
+}
+.heatstroke.default .content_body {
+  height: 90%;
+  padding: 24px 32px;
+  flex-basis: 87%;
+}
+.heatstroke.default .content_body .content_wrapper {
+  height: 100%;
+  padding: 36px;
+  border-radius: 52px;
+  box-shadow: 0 15px #6a7478;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper {
+    padding: 12px;
+    border-radius: 38px;
+    box-shadow: 0 4px #6a7478;
+  }
+}
+.heatstroke.default .content_body .content_wrapper.safety {
+  background-color: #58779a; /*ほぼ安全*/
+}
+.heatstroke.default .content_body .content_wrapper.attention {
+  background-color: #81ac62; /*注意*/
+}
+.heatstroke.default .content_body .content_wrapper.vigilance {
+  background-color: #c6b563; /*警戒*/
+}
+.heatstroke.default .content_body .content_wrapper.severe-vigilance {
+  background-color: #d59369; /*厳重警戒*/
+}
+.heatstroke.default .content_body .content_wrapper.danger {
+  background-color: #c8787a; /*危険*/
+}
+.heatstroke.default .content_body .content_wrapper .content_area {
+  height: 100%;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner {
+  width: 100%;
+  height: 100%;
+  border: dotted 7px #fff;
+  border-radius: 48px;
+  padding: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner {
+    border: dotted 5px #fff;
+    border-radius: 33px;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
+  width: 30%;
+  min-width: 200px;
+  height: 100%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_icon {
+    width: 20%;
+    min-width: 124px;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_icon img {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail {
+    width: 77%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail {
+    width: 80%;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  font-size: 48px;
+  font-weight: bold;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header {
+    font-size: 18px;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header span {
+  display: inline-block;
+  margin-left: 8px;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level {
+  padding: 8px;
+  background-color: white;
+  color: #333333;
+  /*ほぼ安全*/
+  /*注意*/
+  /*警戒*/
+  /*厳重警戒*/
+  /*危険*/
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.safety {
+  color: #58779a;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.attention {
+  color: #81ac62;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.vigilance {
+  color: #c6b563;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.severe-vigilance {
+  color: #d59369;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_header .vigilance_level.danger {
+  color: #c8787a;
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content {
+  padding: 16px 0;
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content {
+    padding: 8px 0;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content img {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_content img {
+    width: 55%;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text {
+  padding: 24px 0;
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text {
+    padding: 16px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text {
+    padding: 8px 0 0;
+  }
+}
+.heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
+  line-height: 1.6;
+  font-size: 32px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .heatstroke.default .content_body .content_wrapper .content_inner .value_detail .value_text p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週間天気予報</title>
+    <link rel="stylesheet" href="./assets/css/weather-forecast.css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="weatherForecast default">
+    <header class="header">
+        <h1 class="header__title"><img src="./assets/images/weather-forecast/blackBoard/title_blackBoard.png"
+                alt="週間天気予報"></h1>
+    </header>
+    <div class="weatherForecast__illust weatherForecast__illust--top">
+        <img src="./assets/images/weather-forecast/blackBoard/illust_top_white.png" alt="">
+    </div>
+    <div class="weatherForecast__content weatherForecast__content--default">
+        <ul class="weatherList">
+            <!--mon-->
+            <li class="weatherList__item">
+                <p class="weatherList__day">7/11</p>
+                <p class="weatherList__dayOfWeek">月</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/01d.png" alt="晴れ">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/safety.png" alt="ほぼ安全">
+                    </div>
+                    <p class="weatherList__wbgt--value safety">
+                        ほぼ安全
+                    </p>
+                </div>
+            </li>
+            <!--tue-->
+            <li class="weatherList__item">
+                <p class="weatherList__day">7/12</p>
+                <p class="weatherList__dayOfWeek">火</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/02d.png" alt="晴れ時々曇り">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/attention.png" alt="注意">
+                    </div>
+                    <p class="weatherList__wbgt--value attention">
+                        注意
+                    </p>
+                </div>
+            </li>
+            <!--wed-->
+            <li class="weatherList__item">
+                <p class="weatherList__day">7/13</p>
+                <p class="weatherList__dayOfWeek">水</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/03d.png" alt="曇り">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/vigilance.png" alt="警戒">
+                    </div>
+                    <p class="weatherList__wbgt--value vigilance">
+                        警戒
+                    </p>
+                </div>
+            </li>
+            <!--thu-->
+            <li class="weatherList__item">
+                <p class="weatherList__day">7/14</p>
+                <p class="weatherList__dayOfWeek">木</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/04d.png" alt="晴れ">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/s-vigilance.png" alt="厳重警戒">
+                    </div>
+                    <p class="weatherList__wbgt--value s-vigilance">
+                        厳重警戒
+                    </p>
+                </div>
+            </li>
+            <!--fri-->
+            <li class="weatherList__item">
+                <p class="weatherList__day">7/15</p>
+                <p class="weatherList__dayOfWeek">金</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/09d.png" alt="小雨">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/danger.png" alt="危険">
+                    </div>
+                    <p class="weatherList__wbgt--value danger">
+                        危険
+                    </p>
+                </div>
+            </li>
+            <!--sat-->
+            <li class="weatherList__item">
+                <p class="weatherList__day weatherList__day--sat">7/16</p>
+                <p class="weatherList__dayOfWeek weatherList__dayOfWeek--sat">土</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/10d.png" alt="雨">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/attention.png" alt="注意">
+                    </div>
+                    <p class="weatherList__wbgt--value attention">
+                        注意
+                    </p>
+                </div>
+            </li>
+            <!--sun-->
+            <li class="weatherList__item">
+                <p class="weatherList__day weatherList__day--sun">7/17</p>
+                <p class="weatherList__dayOfWeek weatherList__dayOfWeek--sun">日</p>
+                <div class="weatherList__dayOfWeather">
+                    <img src="./assets/images/weather-forecast/icon_weather/50d.png" alt="霧">
+                </div>
+                <div class="weatherList__temperature">
+                    <p class="weatherList__temperature--max">31<span>℃</span></p>
+                    <p class="weatherList__temperature--min">25<span>℃</span></p>
+                </div>
+                <div class="weatherList__rainyPercent">
+                    <div class="weatherList__rainyPercent--icon"><img
+                            src="./assets/images/weather-forecast/blackBoard/rainy_percent_icon.png" alt=""></div>
+                    <p class="weatherList__rainyPercent--value">30<span>%</span></p>
+                </div>
+                <div class="weatherList__wbgt">
+                    <div class="weatherList__wbgt--icon">
+                        <img src="./assets/images/weather-forecast/icon_wbgt/attention.png" alt="注意">
+                    </div>
+                    <p class="weatherList__wbgt--value attention">
+                        注意
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="weatherForecast__illust weatherForecast__illust--town"><img
+            src="./assets/images/weather-forecast/blackBoard/illust_town_white.png" alt="">
+    </div>
+    <div class="weatherForecast__illust weatherForecast__illust--bottom">
+        <img src="./assets/images/weather-forecast/blackBoard/blackBoard_bottom.jpg" alt="">
+    </div>
+</body>
+
+</html>

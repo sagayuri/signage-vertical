@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週間作業予定</title>
+    <link rel="stylesheet" href="../assets/css/schedule.css">
+    <!--google fontの設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="schedule flatPanel">
+    <img class="schedule__illust schedule__illust--top" src="../assets/images/schedule/illust_top_blue.png" alt="">
+    <header class="schedule__header">
+        <div class="schedule__title">
+            <h1>
+                ご近隣の皆さまへ
+            </h1>
+            <p>
+                -&nbsp;今週の作業予定&nbsp;-
+            </p>
+        </div>
+    </header>
+    <div class="schedule__content">
+        <div class="schedule__contentMag schedule__contentMag--red">
+            <img src="../assets/images/schedule/icon_magnet_red.png" alt="">
+        </div>
+        <div class="schedule__contentMag schedule__contentMag--blue">
+            <img src="../assets/images/schedule/icon_magnet_blue.png" alt="">
+        </div>
+        <div class="schedule__contentMag schedule__contentMag--yellow">
+            <img src="../assets/images/schedule/icon_magnet_yellow.png" alt="">
+        </div>
+        <div class="schedule__contentMag schedule__contentMag--green">
+            <img src="../assets/images/schedule/icon_magnet_green.png" alt="">
+        </div>
+        <ul class="scheduleList">
+            <!--祝日(月)-->
+            <li class="scheduleList__item scheduleList__item--holiday">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">月</p>
+                <p class="scheduleList__plan">解体工事</p>
+            </li>
+            <!--火曜-->
+            <li class="scheduleList__item">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">月</p>
+                <p class="scheduleList__plan">解体工事</p>
+            </li>
+            <!--水曜-->
+            <li class="scheduleList__item">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">月</p>
+                <p class="scheduleList__plan">解体工事</p>
+            </li>
+            <!--木曜-->
+            <li class="scheduleList__item">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">月</p>
+                <p class="scheduleList__plan">杭工事</p>
+            </li>
+            <!--金曜-->
+            <li class="scheduleList__item">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">月</p>
+                <p class="scheduleList__plan">コンクリート打設</p>
+            </li>
+            <!--土曜-->
+            <li class="scheduleList__item scheduleList__item--sat">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">土</p>
+                <p class="scheduleList__plan">全休日</p>
+            </li>
+            <!--日曜-->
+            <li class="scheduleList__item scheduleList__item--sun">
+                <p class="scheduleList__date">7/25</p>
+                <p class="scheduleList__dayOfWeek">日</p>
+                <p class="scheduleList__plan">全休日</p>
+            </li>
+        </ul>
+        <img class="stationary" src="../assets/images/schedule/stationary.png" alt="">
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__contentMag footer__contentMag--red">
+                <img src="../assets/images/schedule/icon_magnet_red.png" alt="">
+            </div>
+            <div class="footer__contentMag footer__contentMag--blue">
+                <img src="../assets/images/schedule/icon_magnet_blue.png" alt="">
+            </div>
+            <div class="footer__contentMag footer__contentMag--yellow">
+                <img src="../assets/images/schedule/icon_magnet_yellow.png" alt="">
+            </div>
+            <div class="footer__contentMag footer__contentMag--green">
+                <img src="../assets/images/schedule/icon_magnet_green.png" alt="">
+            </div>
+            <div class="footer__contentWrapper">
+                <div class="footer__logo">
+                    <img src="../assets/images/schedule/sample_logo.png" alt="企業ロゴ">
+                </div>
+                <div id="js-floating-box" class="footer__info">
+                    <div id="js-floating-text" class="footer__infoBox">
+                        <p class="footer__infoText">
+                            ゲート付近を通過する際は注意してお通りください。お気づきの点は右記までご連絡ください。0120-123-123
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        const floatingBox = document.querySelector("#js-floating-box");
+        const floatingText = document.querySelector("#js-floating-text");
+        const width = floatingBox.offsetWidth;
+        const floatingTextWidth = floatingText.offsetWidth;
+
+        function floatingAnime() {
+            if (width < floatingTextWidth) {
+                floatingText.classList.add("js-active");
+            }
+        }
+
+        floatingAnime();
+    </script>
+</body>
+
+</html>

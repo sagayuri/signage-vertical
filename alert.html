@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>アラート画面</title>
+    <link rel="stylesheet" href="./assets/css/alert.css">
+</head>
+
+<body>
+    <div class="alertContentOpening alertContentOpening--blue">
+        <img class="alert_title" src="./assets/images/alert/blue/alert_text_opening.png" alt="警報">
+        <img class="bar_top" src="./assets/images/alert/blue/alert_top_opening.jpg" alt="上">
+        <img class="bar_bottom" src="./assets/images/alert/blue/alert_bottom_opening.jpg" alt="下">
+    </div>
+    <div class="alertContent alertContent--blue">
+        <h2 class="alertContent__blink alertContent__blink--blue">熱中症指数が<br>閾値を超えました</h2>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+    setTimeout(() => { $(".alertContent").addClass("slideIn") }, 2000);
+</script>
+
+</html>
