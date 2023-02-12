@@ -124,7 +124,7 @@ body {
   height: 100vh;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: left;
 }
 .alertContent--blue.alertContent {
   background-image: url(../images/alert/blue/alert_main.jpg);
@@ -162,7 +162,9 @@ body {
   }
 }
 .alertContent__blink {
-  padding: 32px 56px;
+  width: 80%;
+  max-width: 864px;
+  padding: 80px 56px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -175,6 +177,27 @@ body {
   animation-name: blinking;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+  .alertContent__blink {
+    font-size: 64px;
+  }
+}
+@media screen and (min-width: 768px ) and (max-width: 1239px) {
+  .alertContent__blink {
+    font-size: 56px;
+  }
+}
+@media screen and (width: 1080px) {
+  .alertContent__blink {
+    font-size: 64px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .alertContent__blink {
+    padding: 64px 24px;
+    font-size: 24px;
+  }
 }
 .alertContent__blink--blue.alertContent__blink {
   border: 5px solid #082d85;

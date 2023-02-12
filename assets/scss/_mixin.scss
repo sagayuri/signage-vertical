@@ -1,7 +1,8 @@
 $breakpoint: (
   sp: "screen and (max-width: 767px)",
   tab: "screen and (min-width: 768px ) and (max-width: 1239px)",
-  pc: "screen and (min-width: 1240px ) and (max-width: 1500px)"
+  pc: "screen and (min-width: 1240px ) and (max-width: 1500px)",
+  vertical: "screen and (width: 1080px)"
 );
 
 @mixin mq($bp) {
