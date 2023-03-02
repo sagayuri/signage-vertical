@@ -7,8 +7,9 @@
   height: 100%;
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
+
   &__illust {
     &--top {
       width: 20%;
@@ -16,21 +17,34 @@
       position: absolute;
       top: 0;
       left: 0;
+
+      @include m.mq(sp) {
+        min-width: 163px;
+      }
     }
     &--couple {
       width: 10%;
       min-width: 200px;
       position: absolute;
-      top: 10%;
+      top: 7%;
       right: 0;
+
       @include m.mq(pc) {
         min-width: 136px;
       }
+
       @include m.mq(tab) {
-        min-width: 70px;
+        min-width: 123px;
+        top: 5%;
       }
+
+      @include m.mq(vertical) {
+        min-width: 200px;
+        top: 7%;
+      }
+
       @include m.mq(sp) {
-        min-width: 78px;
+        min-width: 66px;
       }
       img {
         width: 100%;
@@ -38,23 +52,32 @@
       }
     }
     &--family {
+      max-width: 300px;
       position: absolute;
-      top: 50%;
-      left: 40%;
+      top: 74%;
+      left: 0;
 
       @include m.mq(pc) {
-        max-width: 180px;
-        top: 65%;
+        max-width: 181px;
+        top: 60%;
+        left: 40%;
       }
 
       @include m.mq(tab) {
-        max-width: 151px;
+        max-width: 218px;
+        top: 68%;
+      }
+
+      @include m.mq(vertical) {
+        max-width: 300px;
+        top: 74%;
+        left: 0;
       }
 
       @include m.mq(sp) {
-        max-width: 114px;
-        left: 37%;
-        top: 55%;
+        max-width: 96px;
+        left: 0;
+        top: 74%;
       }
 
     }
@@ -103,6 +126,10 @@
     background: rgba(0, 26, 0, 0.5);
     color: #fff;
 
+    @include m.mq(sp) {
+      padding: 8px;
+    }
+
     &__title {
       line-height: 1.0;
       font-weight: bold;
@@ -112,8 +139,16 @@
         font-size: 48px;
       }
 
+      @include m.mq(tab) {
+        font-size: 36px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 56px;
+      }
+
       @include m.mq(sp) {
-        font-size: 32px;
+        font-size: 18px;
       }
     }
     &__date {
@@ -125,14 +160,34 @@
         font-size: 48px;
       }
 
+      @include m.mq(tab) {
+        font-size: 36px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 56px;
+      }
+
       @include m.mq(sp) {
-        font-size: 32px;
+        font-size: 18px;
       }
 
       span {
         font-size: 24px;
         @include m.mq(pc) {
           font-size: 16px;
+        }
+
+        @include m.mq(tab) {
+          font-size: 16px;
+        }
+
+        @include m.mq(vertical) {
+          font-size: 24px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 14px;
         }
       }
     }
@@ -141,12 +196,35 @@
   .dataWrapper {
     width: 90%;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
     align-items: center;
+
+    @include m.mq(pc) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include m.mq(tab) {
+      flex-direction: row;
+      top: 50%;
+    }
+
+    @include m.mq(vertical) {
+      flex-direction: column;
+      top: 55%;
+    }
+
+    @include m.mq(sp) {
+      width: 82%;
+      top: 52%;
+      gap: 8px;
+    }
 
   }
 
@@ -162,6 +240,7 @@
       }
 
       @include m.mq(sp) {
+        width: 30%;
         min-width: 114px;
         margin-bottom: 0;
       }
@@ -180,7 +259,8 @@
       }
 
       @include m.mq(sp) {
-        min-width: 114px;
+        width: 30%;
+        min-width: 99px;
         margin-bottom: 0;
       }
     }
@@ -205,17 +285,21 @@
     }
 
     &__strings {
+      line-height: 1.0;
       font-size: 298px;
       font-weight: bold;
       color: #f4c403;
 
       @include m.mq(pc) {
-        line-height: 1.0;
         font-size: 250px;
       }
 
       @include m.mq(tab) {
-        font-size: 220px;
+        font-size: 210px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 298px;
       }
 
       @include m.mq(sp) {
@@ -247,8 +331,66 @@
     &--flatPanel {
       background-image: url(../images/noise-meter/flatPanel/base.jpg);
 
+      .noiseMeter {
+
+        &__illust {
+
+          &--top {
+            width: 50%;
+
+            @include m.mq(pc) {
+              width: 30%;
+            }
+
+            @include m.mq(tab) {
+              width: 30%;
+            }
+
+            @include m.mq(vertical) {
+              width: 30%;
+            }
+
+            @include m.mq(sp) {
+              width: 15%;
+            }
+          }
+
+          &--couple {
+            top: 5%;
+          }
+
+          &--family {
+            top: 78%;
+
+            @include m.mq(pc) {
+              top: 60%;
+            }
+
+            @include m.mq(tab) {
+              top: 74%;
+            }
+
+            @include m.mq(vertical) {
+              top: 78%;
+            }
+          }
+
+          &--town {
+            bottom: 0;
+          }
+        }
+      }
+
       .header {
         background: rgba(8, 45, 133, 0.8);
+      }
+
+      .siteName {
+        margin: 299px auto 0;
+      }
+
+      .dataWrapper {
+        top: 57%;
       }
 
       .noiseWrapper {
@@ -291,6 +433,11 @@
             font-size: 180px;
           }
 
+          @include m.mq(vertical) {
+            padding: 30px;
+            font-size: 298px;
+          }
+
           @include m.mq(sp) {
             width: auto;
             padding: 20px;
@@ -301,7 +448,19 @@
 
         }
         &__db {
-          width: 25%;
+          width: auto;
+
+          @include m.mq(pc) {
+            max-width: 41px;
+          }
+
+          @include m.mq(tab) {
+            max-width: 64px;
+          }
+
+          @include m.mq(vertical) {
+            max-width: 87px;
+          }
 
           @include m.mq(sp) {
             max-width: 41px;
@@ -312,8 +471,66 @@
     &--paper {
       background-image: url(../images/noise-meter/paper/base_paper.jpg);
 
+      .noiseMeter {
+
+        &__illust {
+
+          &--top {
+            width: 50%;
+
+            @include m.mq(pc) {
+              width: 30%;
+            }
+
+            @include m.mq(tab) {
+              width: 30%;
+            }
+
+            @include m.mq(vertical) {
+              width: 30%;
+            }
+
+            @include m.mq(sp) {
+              width: 15%;
+            }
+          }
+
+          &--couple {
+            top: 5%;
+          }
+
+          &--family {
+            top: 78%;
+
+            @include m.mq(pc) {
+              top: 60%;
+            }
+
+            @include m.mq(tab) {
+              top: 74%;
+            }
+
+            @include m.mq(vertical) {
+              top: 78%;
+            }
+          }
+
+          &--town {
+            bottom: 0;
+          }
+        }
+      }
+
       .header {
         background: rgba(8, 45, 133, 0.8);
+      }
+
+      .siteName {
+        margin: 299px auto 0;
+      }
+
+      .dataWrapper {
+        top: 57%;
       }
 
       .noiseWrapper {
@@ -339,7 +556,7 @@
         &__strings {
           width: 100%;
           padding-left: 80px;
-          margin-top: 32px;
+          margin-top: 30px;
           background-image: url(../images/noise-meter/paper/blackBoard_small.png);
           background-repeat: no-repeat;
           background-size: contain;
@@ -351,6 +568,10 @@
           @include m.mq(tab) {
             padding: 20px;
             line-height: 1.0;
+          }
+
+          @include m.mq(vertical) {
+            padding: 30px;
           }
 
           @include m.mq(sp) {
@@ -383,30 +604,55 @@
             @include m.mq(tab) {
               font-size: 40px;
             }
+
+            @include m.mq(vertical) {
+              font-size: 56px;
+            }
           }
 
       }
 
+      .siteName {
+
+        &__infoText {
+          font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体",
+          "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN",
+          "Hiragino Mincho ProN", sans-serif;;
+        }
+      }
+
       .dataWrapper {
-        width: 75%;
+        width: 50%;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        gap: 48px;
         align-items: center;
 
         @include m.mq(pc) {
           width: 90%;
+          flex-direction: row;
         }
 
         @include m.mq(tab) {
           width: 90%;
+          top: 50%;
+          flex-direction: row;
+        }
+
+        @include m.mq(vertical) {
+          width: 50%;
+          top: 55%;
+          flex-direction: column;
         }
 
         @include m.mq(sp) {
-          width: 90%;
+          width: 50%;
+          gap: 24px;
         }
 
         .noiseWrapper {
@@ -435,6 +681,11 @@
         display: flex;
         justify-content: flex-start;
         gap: 32px;
+
+        @include m.mq(sp) {
+          gap: 8px;
+        }
+
         &__strings {
           font-family: "dseg";
           font-size: 240px;
@@ -448,6 +699,10 @@
 
           @include m.mq(tab) {
             font-size: 150px;
+          }
+
+          @include m.mq(vertical) {
+            font-size: 240px;
           }
 
           @include m.mq(sp) {
@@ -469,6 +724,10 @@
             font-size: 67px;
           }
 
+          @include m.mq(vertical) {
+            font-size: 124px;
+          }
+
           @include m.mq(sp) {
             white-space: nowrap;
             font-size: 50px;
@@ -482,7 +741,94 @@
         left: 50%;
         bottom: 0;
         transform: translateX(-50%);
+
+        @include m.mq(tab) {
+          width: 100%;
+        }
+
+        @include m.mq(vertical) {
+          width: 100%;
+        }
+
+        @include m.mq(sp) {
+          width: 100%;
+        }
       }
     }
+  }
+}
+
+.siteName {
+
+  &__info {
+    width: 92%;
+    max-width: 975px;
+    padding: 20px 32px;
+    margin: 327px auto 0;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    z-index: 2;
+
+    @include m.mq(pc) {
+      padding: 16px 32px;
+      margin: 48px auto 0;
+    }
+
+    @include m.mq(tab) {
+      padding: 16px 32px;
+      margin: 145px auto 0;
+    }
+
+    @include m.mq(vertical) {
+      padding: 20px 32px;
+      margin: 327px auto 0;
+    }
+
+    @include m.mq(sp) {
+      padding: 8px 24px;
+      margin: 69px auto 0;
+    }
+  }
+
+  &__infoBox {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  &__infoText {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 40px;
+
+    @include m.mq(pc) {
+      font-size: 32px;
+    }
+
+    @include m.mq(tab) {
+      font-size: 32px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
+    }
+
+    @include m.mq(sp) {
+      font-size: 16px;
+    }
+}
+}
+
+.js-active {
+  animation: animate-banner 15s linear infinite;
+}
+
+@keyframes animate-banner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }

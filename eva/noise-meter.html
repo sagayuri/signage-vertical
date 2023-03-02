@@ -18,6 +18,13 @@
         <h1 class="header__title">現在の騒音・振動</h1>
         <p class="header__date">10<span>月</span>23<span>日</span>13:19<span>時点</span></p>
     </header>
+    <div id="js-floating-box" class="siteName__info">
+        <div id="js-floating-text" class="siteName__infoBox">
+            <h2 class="siteName__infoText">
+                日本橋一丁目中地区第一種市街地再開発事業日本橋一丁目中地区第一種市街地再開発事業
+            </h2>
+        </div>
+    </div>
     <div class="dataWrapper">
         <!--騒音-->
         <div class="noiseWrapper">
@@ -51,6 +58,21 @@
     <div class="noiseMeter--eva--bottom">
         <img src="../assets/images/noise-meter/eva/base_bottom.png" alt="">
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+        const floatingBox = document.querySelector("#js-floating-box");
+        const floatingText = document.querySelector("#js-floating-text");
+        const width = floatingBox.offsetWidth;
+        const floatingTextWidth = floatingText.offsetWidth;
+
+        function floatingAnime() {
+            if (width < floatingTextWidth) {
+                floatingText.classList.add("js-active");
+            }
+        }
+
+        floatingAnime();
+    </script>
 </body>
 
 </html>

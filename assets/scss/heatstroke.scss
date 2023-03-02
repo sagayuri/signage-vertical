@@ -14,6 +14,15 @@
       "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN",
       "Hiragino Mincho ProN", sans-serif;
     font-weight: bold;
+
+    @include m.mq(tab) {
+      background-position: left;
+    }
+
+    @include m.mq(sp) {
+      background-position: left;
+    }
+
     &.safety {
       background-image: url(../images/heatstroke/eva/bg_safety.png);
     }
@@ -95,10 +104,14 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
       @include m.mq(tab) {
         width: 82%;
       }
-      @include m.mq(tab) {
+      @include m.mq(sp) {
         width: 87%;
       }
       .numerical_value {
@@ -161,7 +174,7 @@
           width: fit-content;
           padding: 8px 24px;
           border: 4px solid white;
-          margin: 0 auto 32px;
+          margin: 24px auto 32px;
           font-size: 68px;
           background-color: rgba(255, 255, 255, 0.6);
           color: c.$eva-black;
@@ -173,7 +186,7 @@
           }
           @include m.mq(sp) {
             padding: 0 24px;
-            margin: 0 auto;
+            margin: 16px auto 0;
             font-size: 24px;
           }
           span {
