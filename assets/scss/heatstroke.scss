@@ -55,7 +55,7 @@
         padding: 53px 32px 24px 32px;
       }
       @include m.mq(sp) {
-        padding: 26px 32px 24px 32px;
+        padding: 8px;
       }
       .content_title {
         font-size: 48px;
@@ -63,7 +63,7 @@
           font-size: 32px;
         }
         @include m.mq(sp) {
-          font-size: 24px;
+          font-size: 18px;
         }
       }
       .update_time {
@@ -72,7 +72,7 @@
           font-size: 32px;
         }
         @include m.mq(sp) {
-          font-size: 24px;
+          font-size: 18px;
         }
         span {
           margin-left: 4px;
@@ -83,7 +83,7 @@
             font-size: 18px;
           }
           @include m.mq(sp) {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -255,18 +255,41 @@
       background-image: url(../images/heatstroke/bg_header.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include m.mq(sp) {
+        padding: 8px;
+      }
+
       .content_title {
         font-size: 48px;
         letter-spacing: 2px;
+
+        @include m.mq(tab) {
+          font-size: 32px;
+        }
+
+        @include m.mq(vertical) {
+          font-size: 48px;
+        }
+
         @include m.mq(sp) {
-          font-size: 24px;
+          font-size: 18px;
         }
       }
       .update_time {
         font-size: 48px;
         font-weight: bold;
-        @include m.mq(sp) {
+
+        @include m.mq(tab) {
           font-size: 32px;
+        }
+
+        @include m.mq(vertical) {
+          font-size: 48px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 18px;
         }
         span {
           display: inline-block;
@@ -274,7 +297,7 @@
           margin-right: 8px;
           font-size: 24px;
           @include m.mq(sp) {
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -282,20 +305,32 @@
     .content_body {
       height: 90%;
       padding: 24px 32px;
-      flex-basis: 87%;
+      flex-basis: 93%;
+
+      @include m.mq(sp) {
+        padding: 20px;
+      }
+
       .content_wrapper {
         height: 100%;
         padding: 36px;
         border-radius: 52px;
         box-shadow: 0 15px #6a7478;
+
+        @include m.mq(pc) {
+          height: auto;
+        }
+
         @include m.mq(tab) {
           padding: 16px;
         }
+
         @include m.mq(sp) {
           padding: 12px;
           border-radius: 38px;
           box-shadow: 0 4px #6a7478;
         }
+
         &.safety {
           background-color: c.$safety; /*ほぼ安全*/
         }
@@ -321,22 +356,44 @@
           border-radius: 48px;
           padding: 32px;
           display: flex;
+          flex-direction: column;
           flex-wrap: nowrap;
           justify-content: center;
-          gap: 32px;
           align-items: center;
+
+          @include m.mq(pc) {
+            flex-direction: row;
+          }
+
           @include m.mq(sp) {
+            padding: 16px;
             border: dotted 5px #fff;
             border-radius: 33px;
           }
+
           .value_icon {
-            width: 30%;
-            min-width: 200px;
+            width: 50%;
+            min-width: 300px;
             height: 100%;
             position: relative;
+
+            @include m.mq(pc) {
+              width: 40%;
+            }
+
+            @include m.mq(tab) {
+              width: 35%;
+              min-width: auto;
+            }
+
+            @include m.mq(vertical) {
+              width: 50%;
+              min-width: 300px;
+            }
+
             @include m.mq(sp) {
               width: 20%;
-              min-width: 124px;
+              min-width: 161px;
             }
             img {
               width: auto;
@@ -345,20 +402,35 @@
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
+
+              @include m.mq(pc) {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: inherit;
+              }
             }
           }
           .value_detail {
-            width: 60%;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 32px;
+
             @include m.mq(tab) {
-              width: 77%;
+              gap: 16px;
             }
+
+            @include m.mq(vertical) {
+              gap: 32px;
+            }
+
             @include m.mq(sp) {
-              width: 80%;
+              gap: 8px;
             }
+
             .value_header {
               display: flex;
               justify-content: center;
@@ -366,12 +438,19 @@
               gap: 32px;
               font-size: 48px;
               font-weight: bold;
+
               @include m.mq(pc) {
-                font-size: 40px;
+                font-size: 36px;
               }
+
               @include m.mq(tab) {
-                font-size: 32px;
+                font-size: 36px;
               }
+
+              @include m.mq(vertical) {
+                font-size: 48px;
+              }
+
               @include m.mq(sp) {
                 font-size: 18px;
               }
@@ -415,12 +494,19 @@
                 height: auto;
                 margin: 0 auto;
                 display: block;
+
                 @include m.mq(pc) {
-                  width: 90%;
+                  width: 65%;
                 }
+
                 @include m.mq(tab) {
                   width: 80%;
                 }
+
+                @include m.mq(vertical) {
+                  width: 100%;
+                }
+
                 @include m.mq(sp) {
                   width: 55%;
                 }
@@ -428,6 +514,11 @@
             }
             .value_text {
               padding: 24px 0;
+
+              @include m.mq(pc) {
+                padding: 0;
+              }
+
               @include m.mq(tab) {
                 padding: 16px 0 0;
               }
@@ -438,12 +529,19 @@
                 line-height: 1.6;
                 font-size: 32px;
                 font-weight: 700;
+
                 @include m.mq(pc) {
                   font-size: 24px;
                 }
+
                 @include m.mq(tab) {
-                  font-size: 20px;
+                  font-size: 24px;
                 }
+
+                @include m.mq(vertical) {
+                  font-size: 32px;
+                }
+
                 @include m.mq(sp) {
                   font-size: 14px;
                 }

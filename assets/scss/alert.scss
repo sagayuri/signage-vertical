@@ -3,24 +3,27 @@
 @use "common" as c;
 
 .alertContentOpening {
-  width: 100vw;
   height: 100vh;
   position: relative;
+  background-color: #000;
   @at-root {
     &--blue#{&} {
       background-image: url(../images/alert/blue/alert_base_opening.jpg);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
     }
     &--red#{&} {
       background-image: url(../images/alert/red/alert_base_opening.jpg);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
     }
     &--yellow#{&} {
       background-image: url(../images/alert/yellow/alert_base_opening.jpg);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
+      background-repeat: no-repeat;
     }
   }
   @at-root {
@@ -140,4 +143,24 @@
       opacity: 1;
     }
   }
+}
+
+.alert_title {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.bar_top {
+  position: absolute;
+  top: 35%;
+  left: 0;
+}
+
+.bar_bottom {
+  position: absolute;
+  left: 0;
+  bottom: 35%;
 }

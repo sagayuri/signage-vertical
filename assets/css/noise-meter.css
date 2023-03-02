@@ -62,12 +62,12 @@ body {
   color: #333333;
   overflow: hidden;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   body {
     overflow: scroll;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   body {
     overflow: scroll;
   }
@@ -105,12 +105,12 @@ body {
   top: 10%;
   right: 0;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter__illust--couple {
     min-width: 136px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter__illust--couple {
     min-width: 70px;
   }
@@ -129,13 +129,13 @@ body {
   top: 50%;
   left: 40%;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter__illust--family {
     max-width: 180px;
     top: 65%;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter__illust--family {
     max-width: 151px;
   }
@@ -152,7 +152,7 @@ body {
   position: absolute;
   bottom: 5%;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter__illust--town {
     width: 100%;
     height: 80px;
@@ -167,7 +167,7 @@ body {
 .noiseMeter__illust--town img {
   width: 100%;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter__illust--town img {
     height: 100%;
   }
@@ -196,7 +196,7 @@ body {
   font-weight: bold;
   font-size: 56px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .header__title {
     font-size: 48px;
   }
@@ -211,7 +211,7 @@ body {
   font-weight: bold;
   font-size: 56px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .header__date {
     font-size: 48px;
   }
@@ -224,7 +224,7 @@ body {
 .noiseMeter .header__date span {
   font-size: 24px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .header__date span {
     font-size: 16px;
   }
@@ -244,7 +244,7 @@ body {
   min-width: 150px;
   margin-bottom: 24px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .noiseWrapper__title {
     width: 40%;
     margin-left: 12px;
@@ -261,7 +261,7 @@ body {
   min-width: 150px;
   margin-bottom: 24px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .vibrationWrapper__title {
     width: 40%;
   }
@@ -278,12 +278,12 @@ body {
   justify-content: center;
   gap: 32px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .valueWrapper {
     justify-content: flex-start;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter .valueWrapper {
     gap: 8px;
   }
@@ -298,13 +298,13 @@ body {
   font-weight: bold;
   color: #f4c403;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .valueWrapper__strings {
     line-height: 1;
     font-size: 250px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter .valueWrapper__strings {
     font-size: 220px;
   }
@@ -317,12 +317,12 @@ body {
 .noiseMeter .valueWrapper__db {
   min-width: 80px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter .valueWrapper__db {
     max-width: 120px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter .valueWrapper__db {
     max-width: 87px;
   }
@@ -343,12 +343,12 @@ body {
 .noiseMeter--flatPanel .header {
   background: rgba(8, 45, 133, 0.8);
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--flatPanel .noiseWrapper__title {
     max-width: 220px;
   }
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--flatPanel .vibrationWrapper__title {
     max-width: 220px;
   }
@@ -361,13 +361,13 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--flatPanel .valueWrapper__strings {
     padding: 20px;
     margin-top: 0;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--flatPanel .valueWrapper__strings {
     padding: 20px;
     line-height: 1;
@@ -417,12 +417,12 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--paper .valueWrapper__strings {
     padding: 32px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--paper .valueWrapper__strings {
     padding: 20px;
     line-height: 1;
@@ -452,7 +452,7 @@ body {
   width: 100%;
   font-family: "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", "游明朝体+36ポかな", "YuMincho +36p Kana", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--eva .header__title {
     font-size: 40px;
   }
@@ -467,12 +467,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--eva .dataWrapper {
     width: 90%;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--eva .dataWrapper {
     width: 90%;
   }
@@ -512,12 +512,12 @@ body {
   color: #ffab00;
   text-shadow: 0 0 10px #b90008, 0 0 30px #b90008;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--eva .valueWrapper__strings {
     font-size: 180px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--eva .valueWrapper__strings {
     font-size: 150px;
   }
@@ -533,12 +533,12 @@ body {
   color: #ffab00;
   text-shadow: 0 0 10px #b90008, 0 0 30px #b90008;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .noiseMeter--eva .valueWrapper__db {
     font-size: 70px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .noiseMeter--eva .valueWrapper__db {
     max-width: none;
     font-size: 67px;

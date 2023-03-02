@@ -62,12 +62,12 @@ body {
   color: #333333;
   overflow: hidden;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   body {
     overflow: scroll;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   body {
     overflow: scroll;
   }
@@ -119,12 +119,12 @@ body {
   padding: 24px;
   margin-bottom: 80px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherForecast .header {
     margin-bottom: 16px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast .header {
     margin-bottom: 16px;
   }
@@ -143,12 +143,12 @@ body {
   font-size: 64px;
   color: #082d85;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherForecast .header__title {
     font-size: 56px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast .header__title {
     font-size: 56px;
   }
@@ -158,14 +158,14 @@ body {
     font-size: 32px;
   }
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherForecast .header__title img {
     max-width: 300px;
     margin: 0 auto;
     display: block;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast .header__title img {
     max-width: 300px;
     margin: 0 auto;
@@ -189,12 +189,12 @@ body {
   top: 0;
   left: 0;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherForecast__illust--top {
     width: 25%;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast__illust--top {
     width: 25%;
   }
@@ -218,7 +218,7 @@ body {
   margin: 0 auto;
   font-weight: bold;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherForecast__content {
     position: absolute;
     top: 50%;
@@ -226,7 +226,7 @@ body {
     transform: translate(-50%, -50%);
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast__content {
     position: absolute;
     top: 50%;
@@ -260,12 +260,12 @@ body {
   align-items: center;
   gap: 18px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__item {
     gap: 8px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__item {
     gap: 8px;
   }
@@ -278,12 +278,12 @@ body {
 .weatherList__day {
   font-size: 40px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__day {
     font-size: 32px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__day {
     font-size: 32px;
   }
@@ -311,12 +311,12 @@ body {
 .weatherList__dayOfWeek {
   font-size: 32px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__dayOfWeek {
     font-size: 24px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__dayOfWeek {
     font-size: 24px;
   }
@@ -341,12 +341,12 @@ body {
   color: #aa0d0d;
 }
 
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__dayOfWeather {
     width: 84px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__dayOfWeather {
     width: 84px;
   }
@@ -379,12 +379,12 @@ body {
 .weatherList__temperature span {
   font-size: 20px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__temperature span {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__temperature span {
     font-size: 16px;
   }
@@ -417,12 +417,12 @@ body {
   display: inline-block;
   font-size: 18px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__rainyPercent--value span {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__rainyPercent--value span {
     font-size: 16px;
   }
@@ -447,12 +447,12 @@ body {
 .weatherList__wbgt--icon {
   width: 103px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__wbgt--icon {
     width: 52px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__wbgt--icon {
     width: 52px;
   }
@@ -478,7 +478,7 @@ body {
   font-weight: bold;
   color: #fff;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList__wbgt--value {
     width: 100px;
     height: 48px;
@@ -487,7 +487,7 @@ body {
     font-size: 20px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__wbgt--value {
     width: 100px;
     height: 48px;
@@ -562,12 +562,12 @@ body {
 .weatherList--eva.weatherList .weatherList__dayOfWeather {
   height: 132px;
 }
-@media screen and (min-width: 1240px ) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) {
   .weatherList--eva.weatherList .weatherList__dayOfWeather {
     height: 84px;
   }
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList--eva.weatherList .weatherList__dayOfWeather {
     height: 84px;
   }
@@ -586,7 +586,7 @@ body {
 .weatherList--eva.weatherList .weatherList__temperature {
   font-family: "dseg";
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList--eva.weatherList .weatherList__temperature {
     font-size: 28px;
   }
@@ -610,7 +610,7 @@ body {
 .weatherList--eva.weatherList .weatherList__rainyPercent {
   gap: 24px;
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList--eva.weatherList .weatherList__rainyPercent {
     gap: 16px;
     font-size: 24px;
@@ -628,7 +628,7 @@ body {
 .weatherList--eva.weatherList .weatherList__rainyPercent--value {
   font-size: 48px;
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList--eva.weatherList .weatherList__rainyPercent--value {
     font-size: 32px;
   }
@@ -641,7 +641,7 @@ body {
 .weatherList--eva.weatherList .weatherList__wbgt--icon {
   width: 177px;
 }
-@media screen and (min-width: 768px ) and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList--eva.weatherList .weatherList__wbgt--icon {
     width: 123px;
   }
