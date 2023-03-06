@@ -2,6 +2,26 @@
 @use "mixin" as m;
 @use "common" as c;
 
+.contentWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @include m.mq(tab) {
+    gap: 16px;
+  }
+
+  @include m.mq(vertical) {
+    gap: 24px;
+  }
+
+  @include m.mq(sp) {
+    gap: 12px;
+  }
+}
+
 .schedule {
   height: 100vh;
   background-size: cover;
@@ -31,25 +51,24 @@
   }
 
   &__header {
-    height: 12%;
-    max-height: 110px;
-    padding: 32px;
-    margin-bottom: 64px;
+    padding: 32px 0 24px;
     color: c.$misao-blue;
 
     @include m.mq(pc) {
-      padding: 16px;
+      padding: 24px 0 16px;
     }
 
     @include m.mq(tab) {
-      margin-bottom: 40px;
-      padding: 16px;
+      padding: 24px 0 16px;
+    }
+
+    @include m.mq(vertical) {
+      padding: 32px 0 24px;
     }
 
     @include m.mq(sp) {
       max-height: fit-content;
       padding: 16px;
-      margin-bottom: 28px;
     }
 
     @at-root {
@@ -99,17 +118,22 @@
 
     &--main {
       @include m.mq(pc) {
-        width: 80%;
+        width: 60%;
         margin: 0 auto;
       }
 
       @include m.mq(tab) {
-        width: 80%;
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      @include m.mq(vertical) {
+        width: fit-content;
         margin: 0 auto;
       }
 
       @include m.mq(sp) {
-        width: 35%;
+        width: 50%;
         margin: 0 auto;
       }
     }
@@ -126,7 +150,7 @@
       }
 
       @include m.mq(sp) {
-        width: 30%;
+        width: 40%;
         margin: 8px auto 0;
       }
     }
@@ -166,8 +190,8 @@
 
   &__content {
     width: calc(100% - 64px);
-    height: 64%;
-    padding: 40px 56px;
+    flex-basis: calc(75% - 24px);
+    padding: 80px 56px;
     margin: 0 auto;
     background-image: url(../images/schedule/paper_bg_content.jpg);
     background-size: cover;
@@ -176,14 +200,22 @@
     position: relative;
 
     @include m.mq(pc) {
+      flex-basis: auto;
       padding: 12px 56px;
     }
 
     @include m.mq(tab) {
+      flex-basis: calc(73% - 24px);
       padding: 12px 56px;
     }
 
+    @include m.mq(vertical) {
+      flex-basis: calc(75% - 24px);
+    }
+
     @include m.mq(sp) {
+      width: calc(100% - 24px);
+      flex-basis: calc(68% - 24px);
       padding: 12px 24px;
     }
 
@@ -197,17 +229,8 @@
     }
   }
   &__contentMag {
+    width: 32px;
     position: absolute;
-
-    @include m.mq(pc) {
-      width: 16px;
-      height: auto;
-    }
-
-    @include m.mq(tab) {
-      width: 16px;
-      height: auto;
-    }
 
     @include m.mq(sp) {
       width: 12px;
@@ -255,6 +278,7 @@
 
 //スケジュール欄
 .scheduleList {
+  height: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -338,7 +362,11 @@
     }
 
     @include m.mq(tab) {
-      font-size: 24px;
+      font-size: 28px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
     }
 
     @include m.mq(sp) {
@@ -354,7 +382,11 @@
     }
 
     @include m.mq(tab) {
-      font-size: 24px;
+      font-size: 28px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
     }
 
     @include m.mq(sp) {
@@ -366,11 +398,15 @@
     font-size: 48px;
 
     @include m.mq(pc) {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     @include m.mq(tab) {
-      font-size: 32px;
+      font-size: 36px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 48px;
     }
 
     @include m.mq(sp) {
@@ -385,11 +421,15 @@
   right: 70px;
 
   @include m.mq(pc) {
-    width: 21%;
+    width: 25%;
   }
 
   @include m.mq(tab) {
-    width: 21%;
+    width: 40%;
+  }
+
+  @include m.mq(vertical) {
+    width: auto;
   }
 
   @include m.mq(sp) {
@@ -398,41 +438,43 @@
 }
 
 .footer {
-  height: 15%;
-  margin: 32px 0;
+  width: 100%;
+  flex-basis: 15%;
 
   @include m.mq(pc) {
-    height: 12%;
-    margin: 16px 0;
+    flex-basis: 10%;
   }
 
   @include m.mq(tab) {
-    height: 12%;
-    margin: 16px 0;
+    flex-basis: 8%;
   }
 
-  @include m.mq(sp) {
-    height: 12%;
-    margin: 8px 0;
+  @include m.mq(vertical) {
+    flex-basis: 15%;
   }
 
   &__content {
     width: calc(100% - 64px);
     height: 100%;
-    padding: 24px 64px;
+    padding: 32px 64px;
     margin: 0 auto;
     background-image: url(../images/schedule/paper_bg_content.jpg);
     position: relative;
 
     @include m.mq(pc) {
-      padding: 8px 64px;
+      padding: 0 64px;
     }
 
     @include m.mq(tab) {
-      padding: 16px 64px;
+      padding: 12px 56px;
+    }
+
+    @include m.mq(vertical) {
+      padding: 32px 64px;
     }
 
     @include m.mq(sp) {
+      width: calc(100% - 24px);
       padding: 8px 64px;
     }
 
@@ -447,17 +489,8 @@
     }
   }
   &__contentMag {
+    width: 32px;
     position: absolute;
-
-    @include m.mq(pc) {
-      width: 16px;
-      height: auto;
-    }
-
-    @include m.mq(tab) {
-      width: 16px;
-      height: auto;
-    }
 
     @include m.mq(sp) {
       width: 12px;
@@ -473,6 +506,7 @@
         left: 12px;
       }
     }
+
     &--blue {
       top: 16px;
       right: 16px;
@@ -482,6 +516,7 @@
         right: 12px;
       }
     }
+
     &--yellow {
       bottom: 16px;
       left: 16px;
@@ -491,6 +526,7 @@
         left: 12px;
       }
     }
+
     &--green {
       bottom: 16px;
       right: 16px;
@@ -501,58 +537,120 @@
       }
     }
   }
+
   &__contentWrapper {
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 32px;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+
+    @include m.mq(pc) {
+      flex-direction: row;
+      align-items: center;
+      gap: 24px;
+      justify-content: center;
+    }
+
+    @include m.mq(tab) {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+
+    @include m.mq(vertical) {
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+    }
+
+    @include m.mq(sp) {
+      gap: 16px;
+    }
   }
+
   &__logo {
-    width: 15%;
+    width: 25%;
+
+    @include m.mq(pc) {
+      width: 12%;
+    }
+
+    @include m.mq(tab) {
+      width: auto;
+      flex-basis: 20%;
+    }
+
+    @include m.mq(vertical) {
+      width: 25%;
+    }
+
     img {
       width: 100%;
     }
   }
+
   &__info {
+    width: 100%;
     padding: 16px 0;
     flex-basis: 85%;
     background-color: #fff;
     overflow: hidden;
 
+    @include m.mq(pc) {
+      padding: 0;
+      margin: 12px 0;
+      flex-basis: 80%;
+    }
+
     @include m.mq(tab) {
+      flex-basis: 80%;
       padding: 8px 0;
+    }
+
+    @include m.mq(vertical) {
+      flex-basis: 85%;
     }
 
     @include m.mq(sp) {
       padding: 3px 0;
     }
+
     @at-root {
       &--eva#{&} {
         background-color: transparent;
       }
     }
   }
+
   &__infoBox {
+    height: 100%;
     display: inline-block;
     white-space: nowrap;
   }
+
   &__infoText {
     width: fit-content;
+    line-height: 80px;
     font-weight: bold;
     font-size: 40px;
 
     @include m.mq(pc) {
-      font-size: 24px;
+      font-size: 28px;
     }
 
     @include m.mq(tab) {
-      font-size: 24px;
+      font-size: 32px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
     }
 
     @include m.mq(sp) {
+      line-height: 40px;
       font-size: 16px;
     }
-
 
     @at-root {
       &--eva#{&} {
