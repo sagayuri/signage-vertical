@@ -116,17 +116,24 @@ body {
 
 .weatherForecast .header {
   max-height: 90px;
-  padding: 24px;
+  padding: 56px;
   margin-bottom: 80px;
 }
 @media screen and (min-width: 1240px) {
   .weatherForecast .header {
+    padding: 32px;
     margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast .header {
+    padding: 32px;
     margin-bottom: 16px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherForecast .header {
+    padding: 56px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -160,16 +167,17 @@ body {
 }
 @media screen and (min-width: 1240px) {
   .weatherForecast .header__title img {
-    max-width: 300px;
-    margin: 0 auto;
-    display: block;
+    max-width: 250px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherForecast .header__title img {
     max-width: 300px;
-    margin: 0 auto;
-    display: block;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherForecast .header__title img {
+    max-width: none;
   }
 }
 @media screen and (max-width: 767px) {
@@ -181,6 +189,11 @@ body {
 }
 .weatherForecast .header__title--eva {
   color: #fff;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherForecast .header__title--eva {
+    font-size: 48px;
+  }
 }
 .weatherForecast__illust {
   position: absolute;
@@ -204,9 +217,66 @@ body {
     width: 20%;
   }
 }
+.weatherForecast__illust--couple {
+  top: 9%;
+  right: 0;
+}
+@media screen and (min-width: 1240px) {
+  .weatherForecast__illust--couple {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherForecast__illust--couple {
+    max-width: 170px;
+    top: 3%;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherForecast__illust--couple {
+    max-width: none;
+    top: 9%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast__illust--couple {
+    display: none;
+  }
+}
+.weatherForecast__illust--family {
+  left: 0;
+  bottom: 3%;
+}
+@media screen and (min-width: 1240px) {
+  .weatherForecast__illust--family {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherForecast__illust--family {
+    max-width: 250px;
+    bottom: -3%;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherForecast__illust--family {
+    max-width: none;
+    bottom: 3%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherForecast__illust--family {
+    display: none;
+  }
+}
 .weatherForecast__illust--town {
   left: 0;
-  bottom: 7%;
+  bottom: 2%;
+}
+@media screen and (min-width: 1240px) {
+  .weatherForecast__illust--town {
+    bottom: 5%;
+  }
 }
 .weatherForecast__illust--bottom {
   left: 0;
@@ -214,7 +284,7 @@ body {
 }
 .weatherForecast__content {
   width: calc(100% - 64px);
-  padding: 32px 24px;
+  padding: 48px 24px;
   margin: 0 auto;
   font-weight: bold;
 }
@@ -236,7 +306,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .weatherForecast__content {
-    padding: 8px 24px;
+    width: calc(100% - 24px);
+    padding: 16px 8px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -252,16 +323,34 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 1240px) {
+  .weatherList {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .weatherList {
+    gap: 18px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList {
+    gap: 32px;
+  }
 }
 .weatherList__item {
-  width: 14.2857142857%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   gap: 18px;
 }
 @media screen and (min-width: 1240px) {
   .weatherList__item {
+    flex-direction: column;
     gap: 8px;
   }
 }
@@ -280,7 +369,7 @@ body {
 }
 @media screen and (min-width: 1240px) {
   .weatherList__day {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
@@ -288,9 +377,14 @@ body {
     font-size: 32px;
   }
 }
+@media screen and (width: 1080px) {
+  .weatherList__day {
+    font-size: 40px;
+  }
+}
 @media screen and (max-width: 767px) {
   .weatherList__day {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 /*土曜*/
@@ -313,7 +407,7 @@ body {
 }
 @media screen and (min-width: 1240px) {
   .weatherList__dayOfWeek {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
@@ -321,9 +415,14 @@ body {
     font-size: 24px;
   }
 }
+@media screen and (width: 1080px) {
+  .weatherList__dayOfWeek {
+    font-size: 32px;
+  }
+}
 @media screen and (max-width: 767px) {
   .weatherList__dayOfWeek {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 /*土曜*/
@@ -341,6 +440,9 @@ body {
   color: #aa0d0d;
 }
 
+.weatherList__dayOfWeather {
+  width: 103px;
+}
 @media screen and (min-width: 1240px) {
   .weatherList__dayOfWeather {
     width: 84px;
@@ -348,12 +450,17 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__dayOfWeather {
-    width: 84px;
+    width: 68px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__dayOfWeather {
+    width: 103px;
   }
 }
 @media screen and (max-width: 767px) {
   .weatherList__dayOfWeather {
-    width: 42px;
+    width: 32px;
   }
 }
 .weatherList__temperature {
@@ -362,12 +469,22 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   gap: 12px;
-  font-size: 32px;
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherList__temperature {
+    font-size: 28px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__temperature {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
   .weatherList__temperature {
     gap: 4px;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .weatherList__temperature--max {
@@ -391,7 +508,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .weatherList__temperature span {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 .weatherList__rainyPercent {
@@ -400,12 +517,22 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   gap: 12px;
-  font-size: 32px;
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherList__rainyPercent {
+    font-size: 28px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__rainyPercent {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 767px) {
   .weatherList__rainyPercent {
     gap: 4px;
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -437,7 +564,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 8px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherList__wbgt {
+    flex-direction: row;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__wbgt {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 767px) {
   .weatherList__wbgt {
@@ -445,7 +582,7 @@ body {
   }
 }
 .weatherList__wbgt--icon {
-  width: 103px;
+  width: 68px;
 }
 @media screen and (min-width: 1240px) {
   .weatherList__wbgt--icon {
@@ -454,7 +591,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__wbgt--icon {
-    width: 52px;
+    width: 36px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__wbgt--icon {
+    width: 68px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -467,11 +609,11 @@ body {
   height: auto;
 }
 .weatherList__wbgt--value {
-  width: 200px;
-  height: 64px;
+  width: 100px;
+  height: 48px;
   border-radius: 12px;
   margin: 0 auto;
-  line-height: 64px;
+  line-height: 48px;
   background-color: orange;
   text-align: center;
   font-size: 32px;
@@ -489,11 +631,18 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .weatherList__wbgt--value {
+    width: 91px;
+    height: 41px;
+    border-radius: 9px;
+    line-height: 41px;
+    font-size: 20px;
+  }
+}
+@media screen and (width: 1080px) {
+  .weatherList__wbgt--value {
     width: 100px;
     height: 48px;
-    border-radius: 9px;
     line-height: 48px;
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -525,8 +674,13 @@ body {
   background-color: #c8787a;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .weatherList--eva.weatherList .weatherForecast__content {
+    padding: 48px 24px;
+  }
+}
 .weatherList--eva.weatherList .weatherList__item {
-  gap: 32px;
+  gap: 16px;
 }
 @media screen and (max-width: 767px) {
   .weatherList--eva.weatherList .weatherList__item {
@@ -578,10 +732,8 @@ body {
   }
 }
 .weatherList--eva.weatherList .weatherList__dayOfWeather img {
-  width: auto;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 .weatherList--eva.weatherList .weatherList__temperature {
   font-family: "dseg";

@@ -34,21 +34,28 @@
   }
   .header {
     max-height: 90px;
-    padding: 24px;
+    padding: 56px;
     margin-bottom: 80px;
 
     @include m.mq(pc) {
+      padding: 32px;
       margin-bottom: 16px;
     }
 
     @include m.mq(tab) {
+      padding: 32px;
       margin-bottom: 16px;
+    }
+
+    @include m.mq(vertical) {
+      padding: 56px;
     }
 
     @include m.mq(sp) {
       padding: 8px;
       margin-bottom: 8px;
     }
+
     &__title {
       width: fit-content;
       margin: 0 auto;
@@ -69,16 +76,17 @@
       }
 
       img {
+
         @include m.mq(pc) {
-          max-width: 300px;
-          margin: 0 auto;
-          display: block;
+          max-width: 250px;
         }
 
         @include m.mq(tab) {
           max-width: 300px;
-          margin: 0 auto;
-          display: block;
+        }
+
+        @include m.mq(vertical) {
+          max-width: none;
         }
 
         @include m.mq(sp) {
@@ -89,6 +97,10 @@
       }
       &--eva {
         color: #fff;
+
+        @include m.mq(tab) {
+          font-size: 48px;
+        }
       }
     }
   }
@@ -110,18 +122,71 @@
         width: 20%;
       }
     }
+
+    &--couple {
+      top: 9%;
+      right: 0;
+
+      @include m.mq(pc) {
+        display: none;
+      }
+
+      @include m.mq(tab) {
+        max-width: 170px;
+        top: 3%;
+      }
+
+      @include m.mq(vertical) {
+        max-width: none;
+        top: 9%;
+      }
+
+      @include m.mq(sp) {
+        display: none;
+      }
+    }
+
+    &--family {
+      left: 0;
+      bottom: 3%;
+
+      @include m.mq(pc) {
+        display: none;
+      }
+
+      @include m.mq(tab) {
+        max-width: 250px;
+        bottom: -3%;
+      }
+
+      @include m.mq(vertical) {
+        max-width: none;
+        bottom: 3%;
+      }
+
+      @include m.mq(sp) {
+        display: none;
+      }
+    }
+
     &--town {
       left: 0;
-      bottom: 7%;
+      bottom: 2%;
+
+      @include m.mq(pc) {
+        bottom: 5%;
+      }
     }
+
     &--bottom {
       left: 0;
       bottom: 0;
     }
   }
+
   &__content {
     width: calc(100% - 64px);
-    padding: 32px 24px;
+    padding: 48px 24px;
     margin: 0 auto;
     font-weight: bold;
 
@@ -140,7 +205,8 @@
     }
 
     @include m.mq(sp) {
-      padding: 8px 24px;
+      width: calc(100% - 24px);
+      padding: 16px 8px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -157,14 +223,30 @@
   list-style-type: none;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 32px;
+
+  @include m.mq(pc) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include m.mq(sp) {
+    gap: 18px;
+  }
+
+  @include m.mq(vertical) {
+    gap: 32px;
+  }
+
   &__item {
-    width: calc(100% / 7);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     gap: 18px;
 
     @include m.mq(pc) {
+      flex-direction: column;
       gap: 8px;
     }
 
@@ -180,15 +262,19 @@
     font-size: 40px;
 
     @include m.mq(pc) {
-      font-size: 32px;
+      font-size: 24px;
     }
 
     @include m.mq(tab) {
       font-size: 32px;
     }
 
+    @include m.mq(vertical) {
+      font-size: 40px;
+    }
+
     @include m.mq(sp) {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @at-root {
@@ -210,15 +296,19 @@
     font-size: 32px;
 
     @include m.mq(pc) {
-      font-size: 24px;
+      font-size: 20px;
     }
 
     @include m.mq(tab) {
       font-size: 24px;
     }
 
+    @include m.mq(vertical) {
+      font-size: 32px;
+    }
+
     @include m.mq(sp) {
-      font-size: 18px;
+      font-size: 14px;
     }
     @at-root {
       /*土曜*/
@@ -236,16 +326,22 @@
     }
   }
   &__dayOfWeather {
+    width: 103px;
+
     @include m.mq(pc) {
       width: 84px;
     }
 
     @include m.mq(tab) {
-      width: 84px;
+      width: 68px;
+    }
+
+    @include m.mq(vertical) {
+      width: 103px;
     }
 
     @include m.mq(sp) {
-      width: 42px;
+      width: 32px;
     }
   }
   &__temperature {
@@ -254,11 +350,19 @@
     flex-wrap: nowrap;
     justify-content: center;
     gap: 12px;
-    font-size: 32px;
+    font-size: 40px;
+
+    @include m.mq(tab) {
+      font-size: 28px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
+    }
 
     @include m.mq(sp) {
       gap: 4px;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     &--max {
@@ -280,7 +384,7 @@
       }
 
       @include m.mq(sp) {
-        font-size: 13px;
+        font-size: 12px;
       }
     }
   }
@@ -290,11 +394,19 @@
     flex-wrap: nowrap;
     justify-content: center;
     gap: 12px;
-    font-size: 32px;
+    font-size: 40px;
+
+    @include m.mq(tab) {
+      font-size: 28px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 40px;
+    }
 
     @include m.mq(sp) {
       gap: 4px;
-      font-size: 20px;
+      font-size: 16px;
     }
 
     &--icon {
@@ -327,21 +439,33 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 8px;
+
+    @include m.mq(tab) {
+      flex-direction: row;
+    }
+
+    @include m.mq(vertical) {
+      flex-direction: column;
+    }
 
     @include m.mq(sp) {
       gap: 4px;
     }
 
     &--icon {
-      width: 103px;
+      width: 68px;
 
       @include m.mq(pc) {
         width: 52px;
       }
 
       @include m.mq(tab) {
-        width: 52px;
+        width: 36px;
+      }
+
+      @include m.mq(vertical) {
+        width: 68px;
       }
 
       @include m.mq(sp) {
@@ -353,11 +477,11 @@
       }
     }
     &--value {
-      width: 200px;
-      height: 64px;
+      width: 100px;
+      height: 48px;
       border-radius: 12px;
       margin: 0 auto;
-      line-height: 64px;
+      line-height: 48px;
       background-color: orange;
       text-align: center;
       font-size: 32px;
@@ -373,11 +497,17 @@
       }
 
       @include m.mq(tab) {
+        width: 91px;
+        height: 41px;
+        border-radius: 9px;
+        line-height: 41px;
+        font-size: 20px;
+      }
+
+      @include m.mq(vertical) {
         width: 100px;
         height: 48px;
-        border-radius: 9px;
         line-height: 48px;
-        font-size: 20px;
       }
 
       @include m.mq(sp) {
@@ -408,8 +538,14 @@
   }
   @at-root {
     &--eva#{&} {
+
+      .weatherForecast__content {
+        @include m.mq(tab) {
+          padding: 48px 24px;
+        }
+      }
       .weatherList__item {
-        gap: 32px;
+        gap: 16px;
 
         @include m.mq(sp) {
           gap: 8px;
@@ -457,9 +593,8 @@
         }
 
         img {
-          width: auto;
-          max-width: fit-content;
-          height: 100%;
+          width: 100%;
+          height: auto;
         }
       }
       .weatherList__temperature {

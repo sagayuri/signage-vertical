@@ -297,7 +297,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .schedule__content {
-    flex-basis: calc(73% - 24px);
+    flex-basis: calc(70% - 24px);
     padding: 12px 56px;
   }
 }
@@ -592,6 +592,7 @@ body {
 }
 
 .footer__content--eva.footer__content {
+  padding: 0;
   background-image: none;
   background-color: #fff;
 }
@@ -770,8 +771,28 @@ body {
   }
 }
 .footer__infoText--eva.footer__infoText {
-  font-size: 56px;
+  font-size: 40px;
   color: #1d1412;
+}
+@media screen and (min-width: 1240px) {
+  .footer__infoText--eva.footer__infoText {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .footer__infoText--eva.footer__infoText {
+    font-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .footer__infoText--eva.footer__infoText {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__infoText--eva.footer__infoText {
+    font-size: 16px;
+  }
 }
 
 .scheduleList__item--sat.scheduleList__item--eva .scheduleList__date {

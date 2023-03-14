@@ -205,7 +205,7 @@
     }
 
     @include m.mq(tab) {
-      flex-basis: calc(73% - 24px);
+      flex-basis: calc(70% - 24px);
       padding: 12px 56px;
     }
 
@@ -483,6 +483,7 @@
         box-shadow: 0 0 10px rgba(139, 69, 19, 0.25);
       }
       &--eva#{&} {
+        padding: 0;
         background-image: none;
         background-color: #fff;
       }
@@ -654,8 +655,24 @@
 
     @at-root {
       &--eva#{&} {
-        font-size: 56px;
+        font-size: 40px;
         color: c.$eva-black;
+
+        @include m.mq(pc) {
+          font-size: 28px;
+        }
+
+        @include m.mq(tab) {
+          font-size: 32px;
+        }
+
+        @include m.mq(vertical) {
+          font-size: 40px;
+        }
+
+        @include m.mq(sp) {
+          font-size: 16px;
+        }
       }
     }
   }
