@@ -31,39 +31,6 @@
                     class="Weather_gauge__Value--Unit">%</span>
             </p>
         </li>
-        <!--気圧-->
-        <li class="Weather_gauge__Item Weather_gauge__Item--Pressure">
-            <h2 class="Weather_gauge__Title Weather_gauge__Title--Pressure">気温</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Pressure">1008.6<span
-                    class="Weather_gauge__Value--Unit">hPa</span></p>
-        </li>
-        <!--風向-->
-        <li class="Weather_gauge__Item Weather_gauge__Item--Direction">
-            <h2 class="Weather_gauge__Title Weather_gauge__Title--Direction">風向き</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Direction">北北西</p>
-        </li>
-        <!--風速-->
-        <li class="Weather_gauge__Item Weather_gauge__Item--Speed">
-            <h2 class="Weather_gauge__Title Weather_gauge__Title--Speed">風速</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Average">
-                平均風速<span class="Weather_gauge__Value--Numbers">12</span>m/s</p>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Maximum">
-                最大風速<span class="Weather_gauge__Value--Numbers">5</span>m/s</p>
-        </li>
-        <!--UVI-->
-        <li class="Weather_gauge__Item Weather_gauge__Item--Uvi">
-            <h2 class="Weather_gauge__Title Weather_gauge__Title--White Weather_gauge__Title--Uvi">UVI</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--White">10.2</p>
-            <p class="Weather_gauge__Value--Ja">非常に強い</p>
-        </li>
-        <!--日の出日の入-->
-        <li class="Weather_gauge__Item Weather_gauge__Item--Sunrise">
-            <h2 class="Weather_gauge__Title Weather_gauge__Title--Sunrise">日の出・日の入</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の出<span
-                    class="Weather_gauge__Value--Numbers">5:08</span></p>
-            <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の入<span
-                    class="Weather_gauge__Value--Numbers">18:17</span></p>
-        </li>
         <!--雨量-->
         <li class="Weather_gauge__Item">
             <h2 class="Weather_gauge__Title Weather_gauge__Title--Rainfall">雨量</h2>
@@ -79,9 +46,71 @@
         <!--換算WBGT-->
         <li class="Weather_gauge__Item Weather_gauge__Item--Wbgt">
             <h2 class="Weather_gauge__Title Weather_gauge__Title--White Weather_gauge__Title--Wbgt">換算WBGT</h2>
-            <p class="Weather_gauge__Value Weather_gauge__Value--White">28<span
-                    class="Weather_gauge__Value--Unit">℃</span></p>
-            <p class="Weather_gauge__Value--Ja">厳重警戒</p>
+            <div class="Weather_gauge__Content">
+                <p class="Weather_gauge__Value Weather_gauge__Value--White">28<span
+                        class="Weather_gauge__Value--Unit">℃</span></p>
+                <p class="Weather_gauge__Value--Wbgt">厳重警戒</p>
+            </div>
+        </li>
+        <!--風速-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Speed">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Speed">風速</h2>
+                <p class="Weather_gauge__Value Weather_gauge__Value--Average">
+                    平均風速<span class="Weather_gauge__Value--Numbers">12</span>m/s</p>
+                <p class="Weather_gauge__Value Weather_gauge__Value--Maximum">
+                    最大風速<span class="Weather_gauge__Value--Numbers">5</span>m/s</p>
+            <p class="Weather_gauge__Value Weather_gauge__Value--TodayMax">
+                本日の最大風速<span class="Weather_gauge__Value--Numbers">5</span>m/s</p>
+        </li>
+        <!--風向-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Direction">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Direction">風向き</h2>
+            <div class="Weather_gauge__DirectionWrapper">
+                <img class="Weather_gauge__Value Weather_gauge__Value--DirectionIcon" src="./assets/images/weather-gauge/wind-direction/wind_nne.png" alt="北北西">
+                <div class="Weather_gauge__DirectionInner">
+                    <p class="Weather_gauge__Value Weather_gauge__Value--DirectionDegrees">337.5°</p>
+                    <p class="Weather_gauge__Value Weather_gauge__Value--Direction">北北西</p>
+                </div>
+            </div>
+        </li>
+        <!--気圧-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Pressure">
+            <h2 class="Weather_gauge__Title Weather_gauge__Title--Pressure">気圧</h2>
+            <p class="Weather_gauge__Value Weather_gauge__Value--Pressure">1008.6<span
+                    class="Weather_gauge__Value--Unit">hPa</span></p>
+        </li>
+        <!--日の出日の入/UVI-->
+        <li class="Weather_gauge__Item Weather_gauge__Item--Sunrise">
+            <div class="Weather_gauge__SunriseWrapper">
+                <h2 class="Weather_gauge__Title Weather_gauge__Title--Sunrise">日の出・日の入</h2>
+                <div class="Weather_gauge__SunriseInner">
+                    <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の出<span
+                            class="Weather_gauge__Value--Numbers">5:08</span></p>
+                    <p class="Weather_gauge__Value Weather_gauge__Value--Time">日の入<span
+                            class="Weather_gauge__Value--Numbers">18:17</span></p>
+                </div>
+            </div>
+            <div class="Weather_gauge__Uvi">
+                <div class="Weather_gauge__UviWrapper">
+                    <h2 class="Weather_gauge__Title Weather_gauge__Title--White Weather_gauge__Title--Uvi">UVI</h2>
+                    <div class="Weather_gauge__UviInner">
+                        <p class="Weather_gauge__Value Weather_gauge__Value--White">10.2</p>
+                        <p class="Weather_gauge__Value--Ja">非常に強い</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!--現場情報-->
+        <li class="Weather_gauge__Item">
+            <p class="Weather_gauge__measurementPoint">
+                日本橋一丁目中地区第一種市街地再開発事業
+            </p>
+            <p class="Weather_gauge__siteName">
+                日本橋一丁目中地区第一種市街地再開発事業(現場名が入ります)
+            </p>
+            <time class="Weather_gauge__date">
+                2<span>月</span>20<span>日</span>13:24<span>現在</span>
+            </time>
         </li>
     </ul>
 

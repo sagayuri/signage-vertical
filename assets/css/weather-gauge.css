@@ -97,8 +97,8 @@ body {
   list-style-type: none;
 }
 .Weather_gauge__Item {
-  width: calc(33.3333333333% - 20px);
-  height: 31vh;
+  width: calc(50% - 20px);
+  height: 19vh;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 25px;
@@ -110,21 +110,40 @@ body {
 }
 @media screen and (min-width: 1240px) {
   .Weather_gauge__Item {
-    padding: 12px;
-    margin-bottom: 12px;
+    width: calc(33.3333333333% - 20px);
+    height: 30vh;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Item {
-    padding: 12px;
+    height: 18vh;
     margin-bottom: 12px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Item {
+    height: 18vh;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Item {
+    width: calc(50% - 10px);
+    height: 18vh;
     padding: 8px;
     border-radius: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+  }
+}
+.Weather_gauge__Item:nth-of-type(8) {
+  padding: 0;
+}
+.Weather_gauge__Item:last-of-type {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Item:last-of-type {
+    height: 21vh;
   }
 }
 .Weather_gauge__Item--Humidity.Weather_gauge__Item {
@@ -167,26 +186,6 @@ body {
   }
 }
 
-.Weather_gauge__Item--Direction.Weather_gauge__Item {
-  background: url(../images/weather-gauge/wind-direction/wind_nnw.png) 50% 50% no-repeat;
-  background-color: #fff;
-}
-@media screen and (min-width: 1240px) {
-  .Weather_gauge__Item--Direction.Weather_gauge__Item {
-    background-size: 40%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1239px) {
-  .Weather_gauge__Item--Direction.Weather_gauge__Item {
-    background-size: 40%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .Weather_gauge__Item--Direction.Weather_gauge__Item {
-    background-size: 40%;
-  }
-}
-
 .Weather_gauge__Item--Uvi.Weather_gauge__Item {
   background-color: #c8787a; /*非常に強い*/
   /*#d59369 強い*/
@@ -214,14 +213,19 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Title {
-    margin-bottom: 12px;
-    font-size: 28px;
+    margin-bottom: 4px;
+    font-size: 24px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title {
     margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 .Weather_gauge__Title--White.Weather_gauge__Title {
@@ -237,6 +241,20 @@ body {
   display: inline-block;
   top: 7px;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title::before {
+    width: 32px;
+    height: 30px;
+    margin-right: 4px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title::before {
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title::before {
     width: 23px;
@@ -247,6 +265,16 @@ body {
 .Weather_gauge__Title--Temp.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_temp.png) 0 0 no-repeat;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Temp.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Temp.Weather_gauge__Title::before {
+    background-size: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Temp.Weather_gauge__Title::before {
     background-size: 18px;
@@ -255,6 +283,16 @@ body {
 
 .Weather_gauge__Title--Humidity.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_humidity.png) 0 0 no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Humidity.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Humidity.Weather_gauge__Title::before {
+    background-size: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Humidity.Weather_gauge__Title::before {
@@ -265,6 +303,16 @@ body {
 .Weather_gauge__Title--Pressure.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_pressure.png) 0 0 no-repeat;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Pressure.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Pressure.Weather_gauge__Title::before {
+    background-size: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Pressure.Weather_gauge__Title::before {
     background-size: 18px;
@@ -273,6 +321,16 @@ body {
 
 .Weather_gauge__Title--Direction.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_wind_direction.png) 0 0 no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Direction.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Direction.Weather_gauge__Title::before {
+    background-size: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Direction.Weather_gauge__Title::before {
@@ -283,6 +341,16 @@ body {
 .Weather_gauge__Title--Speed.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_wind_speed.png) 0 0 no-repeat;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Speed.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Speed.Weather_gauge__Title::before {
+    background-size: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Speed.Weather_gauge__Title::before {
     background-size: 18px;
@@ -291,6 +359,16 @@ body {
 
 .Weather_gauge__Title--Uvi.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_uvi.png) 0 0 no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Uvi.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Uvi.Weather_gauge__Title::before {
+    background-size: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Uvi.Weather_gauge__Title::before {
@@ -301,6 +379,16 @@ body {
 .Weather_gauge__Title--Sunrise.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_sunrise.png) 0 0 no-repeat;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Sunrise.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Sunrise.Weather_gauge__Title::before {
+    background-size: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Sunrise.Weather_gauge__Title::before {
     background-size: 18px;
@@ -309,6 +397,16 @@ body {
 
 .Weather_gauge__Title--Rainfall.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_rainfall.png) 0 0 no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Rainfall.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Rainfall.Weather_gauge__Title::before {
+    background-size: auto;
+  }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Rainfall.Weather_gauge__Title::before {
@@ -319,13 +417,255 @@ body {
 .Weather_gauge__Title--Wbgt.Weather_gauge__Title::before {
   background: url(../images/weather-gauge/icons/icon_wbgt.png) 0 0 no-repeat;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Title--Wbgt.Weather_gauge__Title::before {
+    background-size: 32px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Title--Wbgt.Weather_gauge__Title::before {
+    background-size: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Title--Wbgt.Weather_gauge__Title::before {
     background-size: 18px;
   }
 }
 
+.Weather_gauge__DirectionWrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__DirectionWrapper {
+    gap: 24px;
+  }
+}
+.Weather_gauge__DirectionInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__DirectionInner {
+    gap: 8px;
+  }
+}
+.Weather_gauge__SunriseWrapper {
+  padding: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__SunriseWrapper {
+    padding: 12px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__SunriseWrapper {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__SunriseWrapper {
+    padding: 8px;
+  }
+}
+.Weather_gauge__SunriseInner {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__SunriseInner {
+    gap: 12px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__SunriseInner {
+    gap: 24px;
+  }
+}
+.Weather_gauge__Uvi {
+  width: 100%;
+  height: 42%;
+  padding: 20px;
+  border-radius: 0 0 25px 25px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #c8787a; /*非常に強い*/
+  /*#d59369 強い*/
+  /*#ccb664 中程度*/
+  /*#58779a 弱い*/
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Uvi {
+    padding: 16px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Uvi {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Uvi {
+    padding: 8px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+.Weather_gauge__UviWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+}
+.Weather_gauge__UviInner {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__UviInner {
+    gap: 4px;
+  }
+}
+.Weather_gauge__measurementPoint {
+  margin-bottom: 8px;
+  font-size: 36px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__measurementPoint {
+    font-size: 24px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__measurementPoint {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__measurementPoint {
+    font-size: 16px;
+  }
+}
+.Weather_gauge__measurementPoint::before {
+  width: 30px;
+  height: 30px;
+  content: "";
+  position: relative;
+  display: inline-block;
+  top: 5px;
+  background: url(../images/weather-gauge/icons/icon_address.png) 0 0 no-repeat;
+  background-size: 30px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__measurementPoint::before {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+  }
+}
+.Weather_gauge__siteName {
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__siteName {
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__siteName {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__siteName {
+    font-size: 13px;
+  }
+}
+.Weather_gauge__date {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 36px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__date {
+    font-size: 24px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__date {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__date {
+    right: 8px;
+    bottom: 0;
+    font-size: 16px;
+  }
+}
+.Weather_gauge__date::before {
+  width: 30px;
+  height: 30px;
+  content: "";
+  position: relative;
+  display: inline-block;
+  top: 3px;
+  background: url(../images/weather-gauge/icons/icon_watch.png) 0 0 no-repeat;
+  background-size: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__date::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__date::before {
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__date::before {
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+  }
+}
+.Weather_gauge__date span {
+  font-size: 20px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__date span {
+    font-size: 12px;
+  }
+}
+.Weather_gauge__Content {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
 .Weather_gauge__Value {
+  line-height: 1;
   font-size: 48px;
   font-weight: bold;
 }
@@ -336,12 +676,17 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Value {
-    font-size: 36px;
+    font-size: 28px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value {
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Value {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .Weather_gauge__Value--Unit {
@@ -354,7 +699,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Value--Unit {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value--Unit {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -392,17 +742,37 @@ body {
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Value--Pressure.Weather_gauge__Value {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Value--DirectionIcon {
+    width: 30%;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value--DirectionIcon {
+    width: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Value--DirectionIcon {
+    width: 37%;
+  }
+}
+
+.Weather_gauge__Value--DirectionDegrees {
+  text-align: center;
+  font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Value--DirectionDegrees {
     font-size: 16px;
   }
 }
 
 .Weather_gauge__Value--Direction.Weather_gauge__Value {
-  width: -moz-fit-content;
-  width: fit-content;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 36px;
 }
 @media screen and (min-width: 1240px) {
@@ -497,14 +867,96 @@ body {
     margin-right: 0;
   }
 }
+.Weather_gauge__Value--TodayMax {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 24px;
+}
+@media screen and (min-width: 1240px) {
+  .Weather_gauge__Value--TodayMax {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Value--TodayMax {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Value--TodayMax {
+    font-size: 12px;
+  }
+}
+.Weather_gauge__Value--TodayMax::before {
+  width: 39px;
+  height: 34px;
+  margin-right: 4px;
+  content: "";
+  position: relative;
+  top: 7px;
+  display: inline-block;
+  background: url(../images/weather-gauge/wind-speed/speed_45degrees.png) 0 0 no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Value--TodayMax::before {
+    width: 21px;
+    height: 20px;
+    margin-right: 0;
+  }
+}
 .Weather_gauge__Value--Ja {
   color: #fff;
   font-size: 24px;
   font-weight: bold;
 }
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Value--Ja {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value--Ja {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 767px) {
   .Weather_gauge__Value--Ja {
-    font-size: 13px;
+    font-size: 12px;
+  }
+}
+.Weather_gauge__Value--Wbgt {
+  min-width: 301px;
+  padding: 18px 32px;
+  margin-top: 16px;
+  border: 4px solid #fff;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Value--Wbgt {
+    padding: 12px 24px;
+    border: 2px solid #fff;
+    font-size: 28px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value--Wbgt {
+    padding: 18px 32px;
+    border: 4px solid #fff;
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .Weather_gauge__Value--Wbgt {
+    padding: 8px 32px;
+    min-width: auto;
+    border: 1px solid #fff;
+    font-size: 14px;
   }
 }
 .Weather_gauge__Value--Numbers {
@@ -522,13 +974,18 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Value--Numbers {
     line-height: 1;
-    font-size: 36px;
+    font-size: 28px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Value--Numbers {
+    font-size: 48px;
   }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Value--Numbers {
     line-height: 1;
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .Weather_gauge__Value--Time {
@@ -572,7 +1029,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Other--Min {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Other--Min {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -592,7 +1054,12 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1239px) {
   .Weather_gauge__Other--Max {
-    font-size: 16px;
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Other--Max {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -603,6 +1070,16 @@ body {
 .Weather_gauge__Other--Day {
   font-size: 18px;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1239px) {
+  .Weather_gauge__Other--Day {
+    font-size: 14px;
+  }
+}
+@media screen and (width: 1080px) {
+  .Weather_gauge__Other--Day {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 767px) {
   .Weather_gauge__Other--Day {

@@ -19,10 +19,11 @@
     justify-content: space-around;
     list-style-type: none;
   }
+
   &__Item {
-    width: -webkit-calc(100% / 3 - 20px);
-    width: calc(100% / 3 - 20px);
-    height: 31vh;
+    width: -webkit-calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 20px);
+    height: 19vh;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 25px;
@@ -35,21 +36,40 @@
     box-sizing: border-box;
 
     @include m.mq(pc) {
-      padding: 12px;
-      margin-bottom: 12px;
+    width: -webkit-calc(100% / 3 - 20px);
+    width: calc(100% / 3 - 20px);
+    height: 30vh;
     }
 
     @include m.mq(tab) {
-      padding: 12px;
+      height: 18vh;
       margin-bottom: 12px;
+    }
 
+    @include m.mq(vertical) {
+      height: 18vh;
+      margin-bottom: 20px;
     }
 
     @include m.mq(sp) {
-      padding: 8px;
-      border-radius: 10px;
-      margin-bottom: 12px;
+    width: -webkit-calc(100% / 2 - 10px);
+    width: calc(100% / 2 - 10px);
+    height: 18vh;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    }
 
+    &:nth-of-type(8) {
+      padding: 0;
+    }
+
+    &:last-of-type {
+      width: 100%;
+
+      @include m.mq(sp) {
+        height: 21vh;
+      }
     }
 
     @at-root {
@@ -87,29 +107,14 @@
           background-size: 45%;
         }
       }
-      &--Direction#{&} {
-        background: url(../images/weather-gauge/wind-direction/wind_nnw.png) 50%
-          50% no-repeat;
-        background-color: #fff;
 
-        @include m.mq(pc) {
-          background-size: 40%;
-        }
-
-        @include m.mq(tab) {
-          background-size: 40%;
-        }
-
-        @include m.mq(sp) {
-          background-size: 40%;
-        }
-      }
       &--Uvi#{&} {
         background-color: #c8787a; /*非常に強い*/
         /*#d59369 強い*/
         /*#ccb664 中程度*/
         /*#58779a 弱い*/
       }
+
       &--Wbgt#{&} {
         background-color: #d8a861; /*厳重警戒*/
         /*#c8787a 危険*/
@@ -119,6 +124,7 @@
       }
     }
   }
+
   &__Title {
     font-size: 36px;
     font-weight: bold;
@@ -129,13 +135,17 @@
     }
 
     @include m.mq(tab) {
-      margin-bottom: 12px;
-      font-size: 28px;
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 36px;
     }
 
     @include m.mq(sp) {
       margin-bottom: 8px;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     @at-root {
@@ -143,6 +153,7 @@
         color: #fff;
       }
     }
+
     &::before {
       width: 45px;
       height: 40px;
@@ -152,80 +163,173 @@
       display: inline-block;
       top: 7px;
 
+      @include m.mq(tab) {
+        width: 32px;
+        height: 30px;
+        margin-right: 4px;
+      }
+
+      @include m.mq(vertical) {
+        width: 45px;
+        height: 45px;
+        margin-right: 8px;
+      }
+
       @include m.mq(sp) {
         width: 23px;
         height: 20px;
         margin-right: 0;
       }
     }
+
     @at-root {
       &--Temp#{&}::before {
         background: url(../images/weather-gauge/icons/icon_temp.png) 0 0
           no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Humidity#{&}::before {
         background: url(../images/weather-gauge/icons/icon_humidity.png) 0 0
           no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Pressure#{&}::before {
         background: url(../images/weather-gauge/icons/icon_pressure.png) 0 0
           no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Direction#{&}::before {
         background: url(../images/weather-gauge/icons/icon_wind_direction.png) 0
           0 no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Speed#{&}::before {
         background: url(../images/weather-gauge/icons/icon_wind_speed.png) 0 0
           no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Uvi#{&}::before {
         background: url(../images/weather-gauge/icons/icon_uvi.png) 0 0
           no-repeat;
 
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
       &--Sunrise#{&}::before {
         background: url(../images/weather-gauge/icons/icon_sunrise.png) 0 0
           no-repeat;
 
-          @include m.mq(sp) {
-            background-size: 18px;
+          @include m.mq(tab) {
+            background-size: 32px;
           }
-      }
-      &--Rainfall#{&}::before {
-        background: url(../images/weather-gauge/icons/icon_rainfall.png) 0 0
-          no-repeat;
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
 
           @include m.mq(sp) {
             background-size: 18px;
           }
       }
+
+      &--Rainfall#{&}::before {
+        background: url(../images/weather-gauge/icons/icon_rainfall.png) 0 0
+          no-repeat;
+
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
+
+          @include m.mq(sp) {
+            background-size: 18px;
+          }
+      }
+
       &--Wbgt#{&}::before {
         background: url(../images/weather-gauge/icons/icon_wbgt.png) 0 0
           no-repeat;
+
+          @include m.mq(tab) {
+            background-size: 32px;
+          }
+
+          @include m.mq(vertical) {
+            background-size: auto;
+          }
 
           @include m.mq(sp) {
             background-size: 18px;
@@ -233,7 +337,229 @@
       }
     }
   }
+
+  &__DirectionWrapper {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+
+    @include m.mq(sp) {
+      gap: 24px;
+    }
+  }
+
+  &__DirectionInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @include m.mq(sp) {
+      gap: 8px;
+    }
+  }
+
+  &__SunriseWrapper {
+    padding: 20px;
+
+    @include m.mq(tab) {
+      padding: 12px;
+    }
+
+    @include m.mq(vertical) {
+      padding: 20px;
+    }
+
+    @include m.mq(sp) {
+      padding: 8px;
+    }
+  }
+
+  &__SunriseInner {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 24px;
+
+    @include m.mq(tab) {
+      gap: 12px;
+    }
+
+    @include m.mq(vertical) {
+      gap: 24px;
+    }
+  }
+
+  &__Uvi {
+    width: 100%;
+    height: 42%;
+    padding: 20px;
+    border-radius: 0 0 25px 25px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #c8787a; /*非常に強い*/
+        /*#d59369 強い*/
+        /*#ccb664 中程度*/
+        /*#58779a 弱い*/
+
+    @include m.mq(tab) {
+      padding: 16px;
+    }
+
+    @include m.mq(vertical) {
+      padding: 20px;
+    }
+
+    @include m.mq(sp) {
+      padding: 8px;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  &__UviWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__UviInner {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    @include m.mq(sp) {
+      gap: 4px;
+    }
+  }
+
+  &__measurementPoint {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: bold;
+
+    @include m.mq(tab) {
+      font-size: 24px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 36px;
+    }
+
+    @include m.mq(sp) {
+      font-size: 16px;
+    }
+
+    &::before {
+    width: 30px;
+    height: 30px;
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 5px;
+    background: url(../images/weather-gauge/icons/icon_address.png) 0 0 no-repeat;
+    background-size: 30px;
+
+    @include m.mq(sp) {
+      width: 18px;
+      height: 18px;
+      background-size: 18px;
+    }
+    }
+  }
+
+  &__siteName {
+    font-size: 24px;
+
+    @include m.mq(tab) {
+      font-size: 16px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 24px;
+    }
+
+    @include m.mq(sp) {
+      font-size: 13px;
+    }
+  }
+
+  &__date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 36px;
+    font-weight: bold;
+
+    @include m.mq(tab) {
+      font-size: 24px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 36px;
+    }
+
+    @include m.mq(sp) {
+      right: 8px;
+      bottom: 0;
+      font-size: 16px;
+    }
+
+    &::before {
+    width: 30px;
+    height: 30px;
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 3px;
+    background: url(../images/weather-gauge/icons/icon_watch.png) 0 0 no-repeat;
+    background-size: 30px;
+
+    @include m.mq(tab) {
+      width: 24px;
+      height: 24px;
+      background-size: 24px;
+    }
+
+    @include m.mq(vertical) {
+      width: 30px;
+      height: 30px;
+      background-size: 30px;
+    }
+
+    @include m.mq(sp) {
+      width: 16px;
+      height: 16px;
+      background-size: 16px;
+    }
+    }
+
+    span {
+      font-size: 20px;
+
+      @include m.mq(sp) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__Content {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+
   &__Value {
+    line-height: 1.0;
     font-size: 48px;
     font-weight: bold;
 
@@ -242,11 +568,15 @@
     }
 
     @include m.mq(tab) {
-      font-size: 36px;
+      font-size: 28px;
+    }
+
+    @include m.mq(vertical) {
+      font-size: 48px;
     }
 
     @include m.mq(sp) {
-      font-size: 18px;
+      font-size: 14px;
     }
 
     &--Unit {
@@ -257,7 +587,11 @@
       }
 
       @include m.mq(tab) {
-        font-size: 18px;
+        font-size: 16px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 24px;
       }
 
       @include m.mq(sp) {
@@ -272,6 +606,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+
       &--Pressure#{&} {
         width: fit-content;
         position: absolute;
@@ -289,15 +624,34 @@
         }
 
         @include m.mq(sp) {
+          font-size: 13px;
+        }
+      }
+
+      &--DirectionIcon {
+        @include m.mq(tab) {
+          width: 30%;
+        }
+
+        @include m.mq(vertical) {
+          width: auto;
+        }
+
+        @include m.mq(sp) {
+          width: 37%;
+        }
+      }
+
+      &--DirectionDegrees {
+        text-align: center;
+        font-size: 24px;
+
+        @include m.mq(sp) {
           font-size: 16px;
         }
       }
+
       &--Direction#{&} {
-        width: fit-content;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-size: 36px;
 
         @include m.mq(pc) {
@@ -312,10 +666,12 @@
           font-size: 14px;
         }
       }
+
       &--White#{&} {
         color: #fff;
       }
     }
+
     &--Average {
       font-size: 24px;
 
@@ -350,6 +706,7 @@
         }
       }
     }
+
     &--Maximum {
       font-size: 24px;
 
@@ -384,15 +741,94 @@
         }
       }
     }
+
+    &--TodayMax {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-size: 24px;
+
+      @include m.mq(pc) {
+        font-size: 20px;
+      }
+
+      @include m.mq(tab) {
+        font-size: 20px;
+      }
+
+      @include m.mq(sp) {
+        font-size: 12px;
+      }
+
+      &::before {
+        width: 39px;
+        height: 34px;
+        margin-right: 4px;
+        content: "";
+        position: relative;
+        top: 7px;
+        display: inline-block;
+        background: url(../images/weather-gauge/wind-speed/speed_45degrees.png)
+          0 0 no-repeat;
+        background-size: contain;
+
+        @include m.mq(sp) {
+          width: 21px;
+          height: 20px;
+          margin-right: 0;
+        }
+      }
+    }
+
     &--Ja {
       color: #fff;
       font-size: 24px;
       font-weight: bold;
 
+      @include m.mq(tab) {
+        font-size: 14px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 24px;
+      }
+
       @include m.mq(sp) {
-        font-size: 13px;
+        font-size: 12px;
       }
     }
+
+    &--Wbgt {
+      min-width: 301px;
+      padding: 18px 32px;
+      margin-top: 16px;
+      border: 4px solid #fff;
+      line-height: 1.0;
+      text-align: center;
+      color: #fff;
+      font-size: 48px;
+      font-weight: bold;
+
+      @include m.mq(tab) {
+        padding: 12px 24px;
+        border: 2px solid #fff;
+        font-size: 28px;
+      }
+
+      @include m.mq(vertical) {
+        padding: 18px 32px;
+        border: 4px solid #fff;
+        font-size: 48px;
+      }
+
+      @include m.mq(sp) {
+        padding: 8px 32px;
+        min-width: auto;
+        border: 1px solid #fff;
+        font-size: 14px;
+      }
+    }
+
     &--Numbers {
       margin: 0 8px 0 4px;
       font-size: 48px;
@@ -406,14 +842,19 @@
 
       @include m.mq(tab) {
         line-height: 1.0;
-        font-size: 36px;
+        font-size: 28px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 48px;
       }
 
       @include m.mq(sp) {
         line-height: 1.0;
-        font-size: 18px;
+        font-size: 14px;
       }
     }
+
     &--Time {
       font-size: 24px;
 
@@ -422,6 +863,7 @@
       }
     }
   }
+
   &__Other {
     position: absolute;
     left: 20px;
@@ -450,13 +892,18 @@
       }
 
       @include m.mq(tab) {
-        font-size: 16px;
+        font-size: 14px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 18px;
       }
 
       @include m.mq(sp) {
         font-size: 11px;
       }
     }
+
     &--Max {
       font-size: 18px;
       font-weight: bold;
@@ -467,16 +914,29 @@
       }
 
       @include m.mq(tab) {
-        font-size: 16px;
+        font-size: 14px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 18px;
       }
 
       @include m.mq(sp) {
         font-size: 11px;
       }
     }
+
     &--Day {
       font-size: 18px;
       font-weight: bold;
+
+      @include m.mq(tab) {
+        font-size: 14px;
+      }
+
+      @include m.mq(vertical) {
+        font-size: 18px;
+      }
 
       @include m.mq(sp) {
         line-height: 1.2;
